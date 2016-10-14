@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>#EnTuCaraTRUMP</title>
+	<link rel="shortcut icon" href="http://i2.esmas.com/finalpage/favicon/favicon.ico">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, minimum-scale=1, height=device-height">
+	<meta http-equiv="cleartype" content="on">
+	<link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:400,700|Merriweather:300,700" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+</head>
+<body>
+	<!--[if lt IE 9]>
+		<p class="chromeframe">Estás usando una versión <strong>vieja</strong> de tu explorador. Por favor <a href="http://browsehappy.com/" target="_blank"> actualiza tu explorador</a> para tener una experiencia completa.</p>
+	<![endif]-->
+	<!-- Google Tag Manager -->
+	<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MR3DS5" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<script>
+		(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','tckDataLayer','GTM-MR3DS5');
+	</script>
+	<!-- End Google Tag Manager -->
+	<article>
+		<header class="visual">
+			<a href="http://noticieros.televisa.com/foro-tv/"><img src="images/forotv.png"></a>
+		</header>
+		<img class="cover" src="images/trump.jpg">
+		<section>
+		<nav class="share">
+			<ins>COMPARTE<br><br></ins>
+			<a class="fb" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.entucaratrump.com','Compartir en Facebook','width=600,height=400')"></a>
+			<a class="tw" onclick="window.open('https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.entucaratrump.com&text=%23entucaratrump','Compartir en Twitter','width=600,height=400')"></a>
+			<a class="wp" href="whatsapp://send?text=#entucaratrump http://www.entucaratrump.com" data-action="share/whatsapp/share"></a>
+		</nav>
+			<p>El último debate entre los candidatos a la presidencia de Estados Unidos, Hillary Clinton y Donald Trump, tendrá lugar este 19 de octubre, a unos días de las votaciones que se celebrarán el 8 de noviembre. Desde el inicio de su campaña, Donald Trump ha sostenido un discurso que vulnera a la comunidad latina y a otras minorías y ha prometido que, de ganar la contienda, las medidas serán más radicales.</p>
+			<p>El discurso violento no es la única arma de Trump. También se vale de la mentira sistemática. De acuerdo con el proyecto ganador del Pulitzer, Politifact, que contrasta las afirmaciones de importantes agentes políticos con datos reales, al menos el 70% de las afirmaciones de Trump son falsas o descontextualizadas.</p>
+			<p>Hoy, abrimos este espacio para que mexicanos y latinos de todas las latitudes puedan expresarle a Trump de frente lo que piensan de él y lo que ha dicho y hecho durante la campaña electoral.</p>
+			<p>Quien miente, evade. Nosotros recabamos las voces de muchos unidos para decirte lo que mexicanos y latinos pensamos #EnTuCaraTrump.</p>
+			<p>Latinoamericano, mujer, migrante, mexicano: si estuvieras frente a Trump, ¿qué le dirías?</p>
+		</section>
+		<section class="especial">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/QXgxApEp7xU" frameborder="0" allowfullscreen></iframe>
+			<script type="text/javascript">
+			$(function function_name(argument) {
+				// body...
+			})
+			var data = "";
+				$.ajax({
+				  url: 'https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=48&playlistId=PLmZsiRvDGLtcDL1fXfcGSBTXuqteeN0WK&key=AIzaSyAYPHS4-q4xeQiUteFTIL8HUId7Q9Tf82k',
+				  data: data,
+				  success: function success(data) {
+				  	console.log(data);
+				  	$.each( data.items, function( key, value ) {
+				  		if (key==0) {
+				  			$('iframe').attr('src',"https://www.youtube.com/embed/"+value.snippet.resourceId.videoId);
+				  		} else {
+					  		var title = value.snippet.title;
+					  		var imagen = value.snippet.thumbnails.high.url;
+					  		var v_id = value.snippet.resourceId.videoId;
+					  		$('.grid').append('<div class="grid_item clearfix" data="'+v_id+'"><img src="'+imagen+'" /></div>');
+				  		}
+				  	});
+				  },
+				  dataType: 'json'
+				});
+				
+			</script>
+			<div class="title_format">	
+				<h2>OPINIONES SOBRE TRUMP</h2>
+			</div>
+			<div class="grid clearfix"></div>
+			<div class="tweet clearfix">
+				<div class="title_format">
+					<h2>OPINA</h2>
+				</div>
+				<textarea id="tweet_ta" placeholder="Danos tu opinión"></textarea>
+				<a class="send_tweet clearfix">ENVIAR</a>
+			</div>
+		</section>
+		<footer>
+			<div class="clearfix">
+				<a href="http://noticieros.televisa.com/foro-tv/"><img class="clearfix" src="images/forotv.png"></a>
+				<ul class="clearfix">
+					<li><a href="https://www.facebook.com/FOROtv/" target="new"><img src="images/ico-fb.png"></li>
+					<li><a href="https://twitter.com/Foro_TV" target="new"><img src="images/ico-tw.png"></li>
+				</ul>	
+			</div>
+		</footer>
+    </article>
+    <script type='text/javascript' src='js/plugins.js'></script>
+</body>
+</html>
