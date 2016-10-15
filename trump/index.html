@@ -41,7 +41,7 @@
 			<p>Latinoamericano, mujer, migrante, mexicano: si estuvieras frente a Trump, ¿qué le dirías?</p>
 		</section>
 		<section class="especial">
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/QXgxApEp7xU" frameborder="0" allowfullscreen></iframe>
+			<iframe  id="iframe" width="560" height="315" src="https://www.youtube.com/embed/QXgxApEp7xU" frameborder="0" allowfullscreen></iframe>
 			<script type="text/javascript">
 			$(function function_name(argument) {
 				// body...
@@ -54,7 +54,7 @@
 				  	console.log(data);
 				  	$.each( data.items, function( key, value ) {
 				  		if (key==0) {
-				  			$('iframe').attr('src',"https://www.youtube.com/embed/"+value.snippet.resourceId.videoId);
+				  			$('#iframe').attr('src',"https://www.youtube.com/embed/"+value.snippet.resourceId.videoId);
 				  		} else {
 					  		var title = value.snippet.title;
 					  		var imagen = value.snippet.thumbnails.high.url;
@@ -68,12 +68,17 @@
 				
 			</script>
 			<div class="title_format">	
-				<h2>OPINIONES SOBRE TRUMP</h2>
+				<h2>VOCES LATINAS</h2>
 			</div>
+			<div class="grid clearfix"></div>
+			<div class="title_format">	
+				<h2>EL VERDADERO DONALD TRUMP</h2>
+			</div>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/QXgxApEp7xU" frameborder="0" allowfullscreen></iframe>
 			<div class="grid clearfix"></div>
 			<div class="tweet clearfix">
 				<div class="title_format">
-					<h2>OPINA</h2>
+					<h2>SÚMATE</h2>
 				</div>
 				<textarea id="tweet_ta" placeholder="Danos tu opinión"></textarea>
 				<a class="send_tweet clearfix">ENVIAR</a>
