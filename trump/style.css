@@ -137,11 +137,15 @@ nav.share a.tw {background:url(images/iconos.svg) no-repeat;background-position:
 nav.share a.wp {background:url(images/iconos.svg) no-repeat;background-position:-38px -42px;background-size:108px 114px;display:none;}
 nav.share a.em {background:url(images/colors.png) no-repeat;background-position:-80px 0px;}
 
-.tweet textarea {width:100%;resize:none;height:120px;padding:9px 10px;border-radius:10px;border:2px solid #0A377A;outline:none;}
+.tweet textarea {width:100%;resize:none;height:80px;padding:9px 10px;border-radius:10px;border:2px solid #0A377A;outline:none;}
 a.send_tweet {background:#E4032D;float:right;padding:3px 20px;font-family:'Alegreya Sans', sans-serif;font-weight:bold;color:#FFF;margin:10px 0px 20px;font-size:16px;}
 
 .title_format {border-bottom:4px solid #E4032D;width:100%;text-align:center;height:19px;margin-bottom:45px;}
 .title_format h2 {background:#FFF;display:inline-block;padding:0px 9px;color:#E4032D;}
+
+.twitter-tweet{ text-align: center; margin: 0 auto; width: 370px !important; float: left; margin-right: 20px;}
+
+.calltoaction { font-weight: bold; color:#E4032D; }
 
 @media (max-width:900px) {
 	img.cover {margin-top:59px;margin-bottom:0px;}

@@ -26,7 +26,7 @@
 
 		$("a.send_tweet").click(function(){
 			var share = $('#tweet_ta').val();
-            window.open('https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.entucaratrump.com&text='+share+' %23entucaratrump','Comparte tu opinión','width=600,height=400');
+            window.open('https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.entucaratrump.com&text='+share+' %23EnTuCaraTrump','Comparte tu opinión','width=600,height=400');
         });
 
 		console.log("functions.js");
