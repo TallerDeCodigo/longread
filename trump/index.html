@@ -26,7 +26,7 @@
 	<!-- End Google Tag Manager -->
 	<article>
 		<header class="visual">
-			<a href="http://noticieros.televisa.com/"><img src="images/noti.png"></a>
+			<a href="http://noticieros.televisa.com/" target="new"><img src="images/noti.png"></a>
 		</header>
 		<img class="cover" src="images/trump.jpg">
 		<section>
@@ -52,7 +52,7 @@
 		</section>
 		
 		<section class="especial">
-			<iframe  id="iframe" width="560" height="315" src="https://www.youtube.com/embed/L0RPxjunrPw" frameborder="0" allowfullscreen></iframe>	
+			<iframe  id="iframe" width="560" height="315" src="https://www.youtube.com/embed/Qrc2HKgYTnw" frameborder="0" allowfullscreen></iframe>	
 			<script type="text/javascript">
 
 			var data = "";
@@ -61,7 +61,7 @@
 			  url: 'https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=48&playlistId=PLmZsiRvDGLtdaUARDrfPbuJoL19Fvyqgn&key=AIzaSyAYPHS4-q4xeQiUteFTIL8HUId7Q9Tf82k',
 			  data: data,
 			  success: function success(data) {
-			  	$('.grid.latinas').append('<div class="grid_item clearfix latinas" data="L0RPxjunrPw"><img src="http://img.youtube.com/vi/L0RPxjunrPw/0.jpg" /></div>');
+			  	$('.grid.latinas').append('<div class="grid_item clearfix latinas" data="Qrc2HKgYTnw"><img src="http://img.youtube.com/vi/Qrc2HKgYTnw/0.jpg" /></div>');
 			  	$('.grid.latinas').append('<div class="grid_item clearfix latinas" data="d9G5Kj0tk48"><img src="http://img.youtube.com/vi/d9G5Kj0tk48/0.jpg" /></div>');
 			  	console.log(data);
 			  	$.each( data.items, function( key, value ) {
@@ -193,7 +193,7 @@
 		</section>
 		<footer>
 			<div class="clearfix">
-				<a href="http://noticieros.televisa.com/"><img class="clearfix" src="images/noti.png"></a>
+				<a href="http://noticieros.televisa.com/" target="new"><img class="clearfix" src="images/noti.png"></a>
 				<ul class="clearfix">
 					<li><a href="https://www.facebook.com/NoticierosTelevisacom/" target="new"><img src="images/ico-fb.png"></li>
 					<li><a href="https://twitter.com/NTelevisa_com" target="new"><img src="images/ico-tw.png"></li>
