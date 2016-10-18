@@ -18,10 +18,16 @@
 			// if (mywindow.scrollTop() > $('nav.share').offset().top) {}
 		 });
 
-		$(document).on('click', '.grid_item', function(e) {
+		$(document).on('click', '.grid_item.latinas', function(e) {
             var position = $('#iframe').offset().top-90;
             $('body').animate({scrollTop: position}, 600);
             $('#iframe').attr('src',"https://www.youtube.com/embed/"+$(this).attr('data')+"?autoplay=1");
+        });
+
+		$(document).on('click', '.grid_item.verdadero', function(e) {
+            var position = $('#iframe1').offset().top-90;
+            $('body').animate({scrollTop: position}, 600);
+            $('#iframe1').attr('src',"https://www.youtube.com/embed/"+$(this).attr('data')+"?autoplay=1");
         });
 
 		$("a.send_tweet").click(function(){

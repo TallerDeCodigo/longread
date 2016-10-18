@@ -26,7 +26,7 @@
 	<!-- End Google Tag Manager -->
 	<article>
 		<header class="visual">
-			<a href="http://noticieros.televisa.com/foro-tv/"><img src="images/forotv.png"></a>
+			<a href="http://noticieros.televisa.com/"><img src="images/noti.png"></a>
 		</header>
 		<img class="cover" src="images/trump.jpg">
 		<section>
@@ -52,133 +52,148 @@
 		</section>
 		
 		<section class="especial">
-			<iframe  id="iframe" width="560" height="315" src="https://www.youtube.com/embed/QXgxApEp7xU" frameborder="0" allowfullscreen></iframe>	
+			<iframe  id="iframe" width="560" height="315" src="https://www.youtube.com/embed/d9G5Kj0tk48" frameborder="0" allowfullscreen></iframe>	
 			<script type="text/javascript">
-			$(function function_name(argument) {
-				// body...
-			})
+
 			var data = "";
-				$.ajax({
-				  url: 'https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=48&playlistId=PLmZsiRvDGLtcDL1fXfcGSBTXuqteeN0WK&key=AIzaSyAYPHS4-q4xeQiUteFTIL8HUId7Q9Tf82k',
-				  data: data,
-				  success: function success(data) {
-				  	console.log(data);
-				  	$.each( data.items, function( key, value ) {
-				  		if (key==0) {
-				  			$('#iframe').attr('src',"https://www.youtube.com/embed/"+value.snippet.resourceId.videoId);
-				  		} else {
-					  		var title = value.snippet.title;
-					  		var imagen = value.snippet.thumbnails.high.url;
-					  		var v_id = value.snippet.resourceId.videoId;
-					  		$('.grid').append('<div class="grid_item clearfix" data="'+v_id+'"><img src="'+imagen+'" /></div>');
-				  		}
-				  	});
-				  },
-				  dataType: 'json'
-				});
+
+			$.ajax({
+			  url: 'https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=48&playlistId=PLmZsiRvDGLtdaUARDrfPbuJoL19Fvyqgn&key=AIzaSyAYPHS4-q4xeQiUteFTIL8HUId7Q9Tf82k',
+			  data: data,
+			  success: function success(data) {
+			  	$('.grid.latinas').append('<div class="grid_item clearfix latinas" data="d9G5Kj0tk48"><img src="http://img.youtube.com/vi/d9G5Kj0tk48/0.jpg" /></div>');
+			  	console.log(data);
+			  	$.each( data.items, function( key, value ) {
+			  		if (key==0) {
+			  			var title = value.snippet.title;
+				  		var imagen = value.snippet.thumbnails.high.url;
+				  		var v_id = value.snippet.resourceId.videoId;
+			  			// $('#iframe').attr('src',"https://www.youtube.com/embed/"+v_id);
+				  		$('.grid.latinas').append('<div class="grid_item clearfix latinas" data="'+v_id+'"><img src="'+imagen+'" /></div>');
+			  		} else {
+				  		var title = value.snippet.title;
+				  		var imagen = value.snippet.thumbnails.high.url;
+				  		var v_id = value.snippet.resourceId.videoId;
+				  		$('.grid.latinas').append('<div class="grid_item clearfix latinas" data="'+v_id+'"><img src="'+imagen+'" /></div>');
+			  		}
+			  	});
+			  },
+			  dataType: 'json'
+			});
+
+			$.ajax({
+			  url: 'https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=48&playlistId=PLmZsiRvDGLtfHFy5HOjCLpCjch-Sv4hzy&key=AIzaSyAYPHS4-q4xeQiUteFTIL8HUId7Q9Tf82k',
+			  data: data,
+			  success: function success(data) {
+			  	console.log(data);
+			  	$.each( data.items, function( key, value ) {
+			  		if (key==0) {
+			  			var title = value.snippet.title;
+				  		var imagen = value.snippet.thumbnails.high.url;
+				  		var v_id = value.snippet.resourceId.videoId;
+				  		$('.grid.verdadero').append('<div class="grid_item verdadero clearfix" data="'+v_id+'"><img src="'+imagen+'" /></div>');
+			  			$('#iframe1').attr('src',"https://www.youtube.com/embed/"+v_id);
+			  		} else {
+				  		var title = value.snippet.title;
+				  		var imagen = value.snippet.thumbnails.high.url;
+				  		var v_id = value.snippet.resourceId.videoId;
+				  		$('.grid.verdadero').append('<div class="grid_item verdadero clearfix" data="'+v_id+'"><img src="'+imagen+'" /></div>');
+			  		}
+			  	});
+			  },
+			  dataType: 'json'
+			});
 				
 			</script>
 			<div class="title_format">	
 				<h2>VOCES LATINAS</h2>
 			</div>
-			<div class="grid clearfix"></div>
+			<div class="grid clearfix latinas"></div>
 			<div class="title_format">	
 				<h2>EL VERDADERO DONALD TRUMP</h2>
 			</div>
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/QXgxApEp7xU" frameborder="0" allowfullscreen></iframe>
-			<div class="grid clearfix"></div>
+			<iframe id="iframe1" width="560" height="315" src="https://www.youtube.com/embed/QXgxApEp7xU" frameborder="0" allowfullscreen></iframe>
+			<div class="grid clearfix verdadero"></div>
 
+			<div class="title_format">
+				<h2>EN LA RED</h2>
+			</div>
 			<div class="tweets clearfix">
-				<div class="title_format">
-					<h2>EN LA RED</h2>
-				</div>
-				<blockquote class="twitter-tweet clearfix" data-lang="en"><p lang="es" dir="ltr">Según las encuestas vigentes, Ted Cruz sería más competitivo que Trump. Perdería por poco con Hillary o con Sanders.</p>&mdash; Héctor Aguilar Camín (@aguilarcamin) <a href="https://twitter.com/aguilarcamin/status/714797623316615168">March 29, 2016</a></blockquote>
-				
 
 				<blockquote class="twitter-tweet clearfix" data-lang="en"><p lang="es" dir="ltr">Trump no debió pisar México. Lo escucho ahora contra los inmigrantes. Nunca ha estado más clara la esencia fascista de nuestro &quot;amigo&quot;.</p>&mdash; Enrique Krauze (@EnriqueKrauze) <a href="https://twitter.com/EnriqueKrauze/status/771175526371168257">September 1, 2016</a></blockquote>
 				
-
 				<blockquote class="twitter-tweet clearfix" data-lang="en"><p lang="es" dir="ltr">Trump es la síntesis más perfecta de un troll en Internet.</p>&mdash; José Merino (@PPmerino) <a href="https://twitter.com/PPmerino/status/785296036080197632">October 10, 2016</a></blockquote>
-				
-
-				<blockquote class="twitter-tweet clearfix" data-lang="en"><p lang="es" dir="ltr">Me acabo de dar cuenta que no puse atención a las últimas 3 respuestas de Clinton porque estaba esperando escuchar algo ridículo de Trump.</p>&mdash; José Merino (@PPmerino) <a href="https://twitter.com/PPmerino/status/785306054997401602">October 10, 2016</a></blockquote>
-				
-
-				<blockquote class="twitter-tweet clearfix" data-lang="en"><p lang="es" dir="ltr">“Cometimos el error de reírnos de las cosas que Trump decía porque pensamos que no era posible que las creyera” Hillary</p>&mdash; José Merino (@PPmerino) <a href="https://twitter.com/PPmerino/status/758865926682882048">July 29, 2016</a></blockquote>
 
 				<blockquote class="twitter-tweet" data-lang="en"><p lang="es" dir="ltr">Es imposible que Donald Trump tenga autoridad ninguna con ese peinado que se hace.</p>&mdash; Elena Poniatowska (@Eponiatowska) <a href="https://twitter.com/Eponiatowska/status/614947084505116672">June 28, 2015</a></blockquote>
 
+				<blockquote class="twitter-tweet" data-lang="en"><p lang="es" dir="ltr">Brexit, Putin, el No, ¿Trump? Todo parece obedecer a una misma ola global de insensatez democrática.</p>&mdash; Héctor Abad F. (@hectorabadf) <a href="https://twitter.com/hectorabadf/status/782781665416470528">October 3, 2016</a></blockquote>
+
+				<blockquote class="twitter-tweet" data-lang="en"><p lang="es" dir="ltr">La palabra prohibida: es &quot;mexicanos&quot;. Trump nos ha llamado violadores. Somos parte significante de su historia y su presente. ¿Es racismo?</p>&mdash; Carmen Boullosa (@carmenboullosa) <a href="https://twitter.com/carmenboullosa/status/785305813191565312">October 10, 2016</a></blockquote>
+
 				<blockquote class="twitter-tweet" data-lang="en"><p lang="es" dir="ltr">La ignorancia de Trump es de terror.</p>&mdash; Mario Campos (@mariocampos) <a href="https://twitter.com/mariocampos/status/644321759177474048">September 17, 2015</a></blockquote>
-
-				<blockquote class="twitter-tweet" data-lang="en"><p lang="es" dir="ltr">Ahora es la cadena NBC quien rompe con Donald Trump y su show Miss Universo por sus comentarios ofensivos a México.</p>&mdash; Alberto Barranco Ch. (@ABarrancoCh) <a href="https://twitter.com/ABarrancoCh/status/615601475360677888">June 29, 2015</a></blockquote>
-
-				<blockquote class="twitter-tweet" data-lang="en"><p lang="es" dir="ltr">Mexicano Diego Saúl Reyna puso bandera en Torre Trump Vancouver en dnd, dice, migrantes cumplen con ética su trabajo <a href="https://t.co/VoJ93UIwsU">pic.twitter.com/VoJ93UIwsU</a></p>&mdash; Julio Astillero (@julioastillero) <a href="https://twitter.com/julioastillero/status/717082537185546240">April 4, 2016</a></blockquote>
 
 				<blockquote class="twitter-tweet" data-lang="en"><p lang="es" dir="ltr">Dos mujeres más, una fotógrafa y una concursante, se unen a la ola de acusaciones contra Trump <a href="https://t.co/Y5MIHrg89O">https://t.co/Y5MIHrg89O</a></p>&mdash; AlejandroPáezVarela (@paezvarela) <a href="https://twitter.com/paezvarela/status/787037930455904256">October 14, 2016</a></blockquote>
 
-				<blockquote class="twitter-tweet" data-lang="en"><p lang="es" dir="ltr">Si trump sacara a todos los latinos, se quedan sin selección de futbol.</p>&mdash; Wero (@Wereverwero) <a href="https://twitter.com/Wereverwero/status/653046790783012864">October 11, 2015</a></blockquote>
-
 				<blockquote class="twitter-tweet" data-lang="en"><p lang="es" dir="ltr">Por los caminos de Trump vía <a href="https://twitter.com/monerorape">@monerorape</a> <a href="https://t.co/GwjqSFXw7x">pic.twitter.com/GwjqSFXw7x</a></p>&mdash; Denise Dresser (@DeniseDresserG) <a href="https://twitter.com/DeniseDresserG/status/785527747833626624">October 10, 2016</a></blockquote>
 
-				<blockquote class="twitter-tweet" data-lang="en"><p lang="es" dir="ltr"><a href="https://twitter.com/HillaryClinton">@HillaryClinton</a> ganó la noche. Trump fue Trump: no preparado (intelectual o temperamentalmente) para ser Presidente <a href="https://twitter.com/hashtag/TertuliaHillaryvsTrump?src=hash">#TertuliaHillaryvsTrump</a></p>&mdash; Denise Dresser (@DeniseDresserG) <a href="https://twitter.com/DeniseDresserG/status/780600124145819649">September 27, 2016</a></blockquote>
-
-				<blockquote class="twitter-tweet" data-lang="en"><p lang="es" dir="ltr">Tu novio enojado con Donald Trump.</p>&mdash; CHUMIBEBÉ (@ChumelTorres) <a href="https://twitter.com/ChumelTorres/status/611684033014018048">June 18, 2015</a></blockquote>
+				<blockquote class="twitter-tweet" data-lang="en"><p lang="es" dir="ltr">Si trump sacara a todos los latinos, se quedan sin selección de futbol.</p>&mdash; Wero (@Wereverwero) <a href="https://twitter.com/Wereverwero/status/653046790783012864">October 11, 2015</a></blockquote>
 
 				<blockquote class="twitter-tweet" data-lang="en"><p lang="es" dir="ltr">&quot;Y la segunda corneta sonó. Y vi a Trump y Clinton ganar en Florida&quot;.<br>Apocalipsis 3:25</p>&mdash; CHUMIBEBÉ (@ChumelTorres) <a href="https://twitter.com/ChumelTorres/status/709898149955915776">March 16, 2016</a></blockquote>
-
-				<blockquote class="twitter-tweet" data-lang="en"><p lang="es" dir="ltr">¿No sería tal vez hora de recordarle al señor Trump que México contiene la migración centroamericana hacia EUA? <a href="https://twitter.com/hashtag/noestamosmancos?src=hash">#noestamosmancos</a></p>&mdash; Alejandro Hope (@ahope71) <a href="https://twitter.com/ahope71/status/634497886215122944">August 20, 2015</a></blockquote>
-
-				<blockquote class="twitter-tweet" data-lang="en"><p lang="es" dir="ltr">La estrategia de Trump se vio debilitada por la astucia de Clinton, aristócrata política poco empática y simpática. <a href="https://t.co/6kqYrnUHjT">https://t.co/6kqYrnUHjT</a></p>&mdash; JOSÉ CÁRDENAS (@JoseCardenas1) <a href="https://twitter.com/JoseCardenas1/status/781202763581710336">September 28, 2016</a></blockquote>
-
-				<blockquote class="twitter-tweet" data-lang="en"><p lang="es" dir="ltr">Ali, con todo su arte y magnitud, se hubiera madreado a Trump divinamente. Le habría enseñado a disfrutar el olor del tamal.</p>&mdash; Gael Garcia Bernal (@GaelGarciaB) <a href="https://twitter.com/GaelGarciaB/status/739144305760178176">June 4, 2016</a></blockquote>
 
 				<blockquote class="twitter-tweet" data-lang="en"><p lang="es" dir="ltr">La voz de este imbécil. A lo que hemos llegado. Qué horror. Trump es el enemigo de toda bondad y de todo lo humano.</p>&mdash; Gael Garcia Bernal (@GaelGarciaB) <a href="https://twitter.com/GaelGarciaB/status/780580307493875712">September 27, 2016</a></blockquote>
 
 				<blockquote class="twitter-tweet" data-lang="en"><p lang="es" dir="ltr">Feliz <a href="https://twitter.com/hashtag/5deMayo?src=hash">#5deMayo</a> Donald Trump: Esto es lo que pensamos de ti los mexicanos. <a href="https://t.co/LfpagaJrHq">pic.twitter.com/LfpagaJrHq</a></p>&mdash; Emilio Lezama (@emiliolezama) <a href="https://twitter.com/emiliolezama/status/728244072687669248">May 5, 2016</a></blockquote>
 
+				<blockquote class="twitter-tweet" data-lang="en"><p lang="es" dir="ltr">Un candidato como Trump es degradante para la política. Su presencia dejará un mal recuerdo en el mundo entero.</p>&mdash; Diego Valadés (@dvalades) <a href="https://twitter.com/dvalades/status/785452263904915457">October 10, 2016</a></blockquote>
+
 				<blockquote class="twitter-tweet" data-lang="en"><p lang="es" dir="ltr">Pew Research Center <a href="https://twitter.com/pewresearch">@pewresearch</a> afirma: el 59% de los norteamericanos se oponen al muro de Trump, el 38% lo apoya.</p>&mdash; Lorenzo Meyer (@DrLorenzoMeyer) <a href="https://twitter.com/DrLorenzoMeyer/status/718133571915939840">April 7, 2016</a></blockquote>
 
-				<blockquote class="twitter-tweet" data-lang="en"><p lang="es" dir="ltr">Brexit, Putin, el No, ¿Trump? Todo parece obedecer a una misma ola global de insensatez democrática.</p>&mdash; Héctor Abad F. (@hectorabadf) <a href="https://twitter.com/hectorabadf/status/782781665416470528">October 3, 2016</a></blockquote>
-
-				<blockquote class="twitter-tweet" data-lang="en"><p lang="es" dir="ltr">Por primera vez en su historia USAToday toma partido en unas elecciones presidenciales: contra el peligro populista de Trump. <a href="https://t.co/IineA1qnLY">https://t.co/IineA1qnLY</a></p>&mdash; Héctor Abad F. (@hectorabadf) <a href="https://twitter.com/hectorabadf/status/781689765540356096">September 30, 2016</a></blockquote>
-
-				<blockquote class="twitter-tweet" data-lang="en"><p lang="es" dir="ltr">La palabra prohibida: es &quot;mexicanos&quot;. Trump nos ha llamado violadores. Somos parte significante de su historia y su presente. ¿Es racismo?</p>&mdash; Carmen Boullosa (@carmenboullosa) <a href="https://twitter.com/carmenboullosa/status/785305813191565312">October 10, 2016</a></blockquote>
+				
 
 				<blockquote class="twitter-tweet" data-lang="en"><p lang="es" dir="ltr">El nuevo populismo de Trump, Le Pen y otros es globalifobia de derecha. No quieren más justicia e inclusión sino exclusión y aislamiento</p>&mdash; Jenaro Villamil (@jenarovillamil) <a href="https://twitter.com/jenarovillamil/status/748551202237931520">June 30, 2016</a></blockquote>
 
-				<blockquote class="twitter-tweet" data-lang="en"><p lang="es" dir="ltr">Los latinos siempre recordarán quien apoyó a Trump cuando él insultó a los inmigrantes. Eso no se olvida y menos el día de elecciones.</p>&mdash; JORGE RAMOS (@jorgeramosnews) <a href="https://twitter.com/jorgeramosnews/status/785851539525173248">October 11, 2016</a></blockquote>
-
-				<blockquote class="twitter-tweet" data-lang="en"><p lang="es" dir="ltr">La noticia del lunes es que el video de Trump sobre acoso a mujeres no desaparece después del debate.¿Lo seguirán apoyando los Republicanos?</p>&mdash; JORGE RAMOS (@jorgeramosnews) <a href="https://twitter.com/jorgeramosnews/status/785474838785826816">October 10, 2016</a></blockquote>
+				<blockquote class="twitter-tweet" data-lang="en"><p lang="es" dir="ltr">Tras el Brexit, solo falta la victoria de Trump para el suicidio global#</p>&mdash; Luis Prados (@lpescosura) <a href="https://twitter.com/lpescosura/status/746192068129624064">June 24, 2016</a></blockquote>
 
 				<blockquote class="twitter-tweet" data-lang="en"><p lang="es" dir="ltr">¿En qué estará pensando Trump? Quiere voto Latino pero propone deportaciones masivas, 1 muro con México y pinta inmigrantes como criminales</p>&mdash; JORGE RAMOS (@jorgeramosnews) <a href="https://twitter.com/jorgeramosnews/status/756445431022886912">July 22, 2016</a></blockquote>
 
-				<blockquote class="twitter-tweet" data-lang="en"><p lang="es" dir="ltr">Tras el Brexit, solo falta la victoria de Trump para el suicidio global#</p>&mdash; Luis Prados (@lpescosura) <a href="https://twitter.com/lpescosura/status/746192068129624064">June 24, 2016</a></blockquote>
-
-				<blockquote class="twitter-tweet" data-lang="en"><p lang="es" dir="ltr">Republicanos van por el <a href="https://twitter.com/hashtag/Senado?src=hash">#Senado</a> sin mencionar a <a href="https://twitter.com/hashtag/Trump?src=hash">#Trump</a> → <a href="https://t.co/1xYguJVyK9">https://t.co/1xYguJVyK9</a><br>realDonaldTrump <a href="https://t.co/3kO0G80Nt2">pic.twitter.com/3kO0G80Nt2</a></p>&mdash; Javier Sicilia (@JavSicilia) <a href="https://twitter.com/JavSicilia/status/787704936607916032">October 16, 2016</a></blockquote>
+				
 
 				<blockquote class="twitter-tweet" data-lang="en"><p lang="es" dir="ltr">No hay ningún elemento jurídico para que Clinton esté en prisión, pero sí parece haber factores clínicos para que Trump esté en un manicomio</p>&mdash; Diego Valadés (@dvalades) <a href="https://twitter.com/dvalades/status/787690637655015424">October 16, 2016</a></blockquote>
 
-				<blockquote class="twitter-tweet" data-lang="en"><p lang="es" dir="ltr">Un candidato como Trump es degradante para la política. Su presencia dejará un mal recuerdo en el mundo entero.</p>&mdash; Diego Valadés (@dvalades) <a href="https://twitter.com/dvalades/status/785452263904915457">October 10, 2016</a></blockquote>
-
-				<blockquote class="twitter-tweet" data-lang="en"><p lang="es" dir="ltr">En Inglaterra discutieron la posibilidad de negarse a recibir la visita de Trump, a pesar de que a los ingleses no los había insultado.</p>&mdash; Diego Valadés (@dvalades) <a href="https://twitter.com/dvalades/status/770846396589092865">August 31, 2016</a></blockquote>
-
-				<blockquote class="twitter-tweet" data-lang="en"><p lang="es" dir="ltr">La estructura institucional estadounidense no deja espacio para un dictador, pero si ganara Trump pondría al Congreso en serios problemas.</p>&mdash; Diego Valadés (@dvalades) <a href="https://twitter.com/dvalades/status/756185926015922177">July 21, 2016</a></blockquote>
-
-				<blockquote class="twitter-tweet" data-lang="en"><p lang="es" dir="ltr">La humanidad contraataca a <a href="https://twitter.com/hashtag/Trump?src=hash">#Trump</a> <a href="https://twitter.com/realDonaldTrump">@realDonaldTrump</a>. Únete ya a la carta abierta que está dando la vuelta al mundo: <a href="https://t.co/mLpqig865y">https://t.co/mLpqig865y</a></p>&mdash; Damian Alcazar (@DamianAlcazar) <a href="https://twitter.com/DamianAlcazar/status/717575421181751297">April 6, 2016</a></blockquote>
 
 				<blockquote class="twitter-tweet" data-lang="en"><p lang="es" dir="ltr">Trump cantinfleó toda la noche y le echó la culpa a todos los demás por sus errores. Me suena familiar eso.</p>&mdash; El Iluminado (@callodehacha) <a href="https://twitter.com/callodehacha/status/780599376276185088">September 27, 2016</a></blockquote>
 
-				<blockquote class="twitter-tweet" data-lang="en"><p lang="es" dir="ltr">OBAMA QUIERE ENVIAR A TRUMP A MARTE:<a href="https://t.co/nZ1IzmRRxr">https://t.co/nZ1IzmRRxr</a></p>&mdash; El Iluminado (@callodehacha) <a href="https://twitter.com/callodehacha/status/785973549139800064">October 11, 2016</a></blockquote>
+				<blockquote class="twitter-tweet" data-lang="es"><p lang="es" dir="ltr"><a href="https://twitter.com/hashtag/EnTuCaraTrump?src=hash">#EnTuCaraTrump</a> si no eres capaz de respetar a un país..crees que tu mereces algún tipo de respetó?</p>&mdash; yessi Ruiz (@yeZhiruiz) <a href="https://twitter.com/yeZhiruiz/status/787985961908961280">17 de octubre de 2016</a></blockquote>
+
+				<blockquote class="twitter-tweet" data-lang="es"><p lang="es" dir="ltr"><a href="https://twitter.com/hashtag/EnTuCaraTrump?src=hash">#EnTuCaraTrump</a> Eres una vergüenza para el pueblo Norteamericano.</p>&mdash; josé luis vazquez (@jolvac) <a href="https://twitter.com/jolvac/status/787986045123989504">17 de octubre de 2016</a></blockquote>
+
+				<blockquote class="twitter-tweet" data-lang="es"><p lang="es" dir="ltr"><a href="https://twitter.com/hashtag/EnTuCaraTrump?src=hash">#EnTuCaraTrump</a> los latinos no vamos a permitir que ganes la presidencia</p>&mdash; Wendy Fontanes (@WendyFontain) <a href="https://twitter.com/WendyFontain/status/788041551075155969">17 de octubre de 2016</a></blockquote>
+
+				<blockquote class="twitter-tweet" data-lang="es"><p lang="es" dir="ltr">Caundo al imbécil le mostraron la luna sólo pudo ver el dedo del que se la señaló. <a href="https://twitter.com/hashtag/EnTuCaraTrump?src=hash">#EnTuCaraTrump</a> <a href="https://t.co/I5IOnpNqk4">pic.twitter.com/I5IOnpNqk4</a></p>&mdash; Foremex (@Foremex) <a href="https://twitter.com/Foremex/status/788008024593932289">17 de octubre de 2016</a></blockquote>
+
+				<blockquote class="twitter-tweet" data-lang="es"><p lang="es" dir="ltr">&quot;Para México no existes cabrón&quot;...      <a href="https://twitter.com/hashtag/EnTuCaraTrump?src=hash">#EnTuCaraTrump</a> <a href="https://t.co/VxhTcpplYN">pic.twitter.com/VxhTcpplYN</a></p>&mdash; Daniel El Faros (@Sr_Faros) <a href="https://twitter.com/Sr_Faros/status/787990978602741760">17 de octubre de 2016</a></blockquote>
+
+				
+				
+				<blockquote class="twitter-tweet" data-lang="es"><p lang="es" dir="ltr">La decadencia de tu pelo, de tu cuerpo abotagado, de tus palabras sin eco y de tu gran odio al mundo son reflejo de tu futuro <a href="https://twitter.com/hashtag/EnTuCaraTrump?src=hash">#EnTuCaraTrump</a></p>&mdash; Héctor Fule León (@hfule) <a href="https://twitter.com/hfule/status/788006438354292740">17 de octubre de 2016</a></blockquote>
+				
+				<blockquote class="twitter-tweet" data-lang="es"><p lang="es" dir="ltr"><a href="https://twitter.com/hashtag/EnTuCaraTrump?src=hash">#EnTuCaraTrump</a> ✊ Misogino, Racista asqueroso, Ojalá pronto demuestren los Latinos que su Voto si vale!! 👍</p>&mdash; Alma Rocio Vizueth (@arocio77) <a href="https://twitter.com/arocio77/status/788047107357761540">17 de octubre de 2016</a></blockquote>
+				
+				<blockquote class="twitter-tweet" data-lang="es"><p lang="es" dir="ltr">Misoginia + racismo + egoísmo = Trump <a href="https://twitter.com/hashtag/EnTuCaraTrump?src=hash">#EnTuCaraTrump</a></p>&mdash; Uriel Romero (@UrielRomeroH) <a href="https://twitter.com/UrielRomeroH/status/788070578733264896">17 de octubre de 2016</a></blockquote>
+				
+				<blockquote class="twitter-tweet" data-lang="es"><p lang="es" dir="ltr">No existes para México, ni para Clinton y ni siquiera para tu partido, you are only a bad joke. <a href="https://twitter.com/hashtag/EnTuCaraTrump?src=hash">#EnTuCaraTrump</a>  <a href="https://t.co/95GxJ25Fqy">https://t.co/95GxJ25Fqy</a></p>&mdash; Serch House #Worlds (@TanyySerchHouse) <a href="https://twitter.com/TanyySerchHouse/status/788009424975650821">17 de octubre de 2016</a></blockquote>
+				
+				<blockquote class="twitter-tweet" data-lang="es"><p lang="es" dir="ltr">¿Ustedes que harían si lo vieran de frente? No sé que llegaría primero, el insulto o el madrazo <a href="https://twitter.com/hashtag/EnTuCaraTrump?src=hash">#EnTuCaraTrump</a> <a href="https://t.co/hC8MLoyzjS">pic.twitter.com/hC8MLoyzjS</a></p>&mdash; Valentiиa (@NotaxPerfectas) <a href="https://twitter.com/NotaxPerfectas/status/788011189435453441">17 de octubre de 2016</a></blockquote>
 				
 			</div>
 			
 		</section>
 		<footer>
 			<div class="clearfix">
-				<a href="http://noticieros.televisa.com/foro-tv/"><img class="clearfix" src="images/forotv.png"></a>
+				<a href="http://noticieros.televisa.com/"><img class="clearfix" src="images/noti.png"></a>
 				<ul class="clearfix">
-					<li><a href="https://www.facebook.com/FOROtv/" target="new"><img src="images/ico-fb.png"></li>
-					<li><a href="https://twitter.com/Foro_TV" target="new"><img src="images/ico-tw.png"></li>
+					<li><a href="https://www.facebook.com/NoticierosTelevisacom/" target="new"><img src="images/ico-fb.png"></li>
+					<li><a href="https://twitter.com/NTelevisa_com" target="new"><img src="images/ico-tw.png"></li>
 				</ul>	
 			</div>
 		</footer>
