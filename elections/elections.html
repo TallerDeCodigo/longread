@@ -23,6 +23,12 @@
 	<!--[if lt IE 9]>
 		<p class="chromeframe">Estás usando una versión <strong>vieja</strong> de tu explorador. Por favor <a href="http://browsehappy.com/" target="_blank"> actualiza tu explorador</a> para tener una experiencia completa.</p>
 	<![endif]-->
+	<div class="overscreen">
+		<div class="rotate">
+			<img src="images/rotate.png">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+		</div>
+	</div>
 	<article>
 		<header class="visual">
 			<a href="http://noticieros.televisa.com/" target="new"><img src="images/noti.png"></a>
@@ -190,6 +196,98 @@
 			<h2>Fusce ultrices rhoncus massa faucibus commodo</h2><br/>
 			<p>Donec pellentesque metus ut ligula volutpat, nec eleifend urna ullamcorper. <strong>Mauris vel metus sit</strong> amet sem scelerisque placerat ac id enim. Nullam et ipsum nisl. Aenean eget ante vestibulum, interdum enim fringilla, porttitor sem. Nunc vitae malesuada libero. <i>Suspendisse potenti.</i> Mauris sodales, tortor eget sollicitudin condimentum, <a href="">diam est dapibus justo</a>, a iaculis nisl purus vel urna. Nam dapibus turpis feugiat magna mattis, at sagittis mi maximus.</p>
 			<p>Vestibulum in pulvinar lectus. Donec fringilla nibh at est gravida ultricies. <i>Proin bibendum metus vitae sapien dignissim tincidunt.</i> Mauris eleifend facilisis ligula, vel sagittis ligula feugiat ut. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. <strong>Fusce hendrerit erat non purus auctor viverra.</strong></p>
+			<iframe  id="iframe" width="560" height="315" src="https://www.youtube.com/embed/Qrc2HKgYTnw" frameborder="0" allowfullscreen></iframe>	
+			<script type="text/javascript">
+
+			var data = "";
+
+			$.ajax({
+			  url: 'https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=50&playlistId=PLmZsiRvDGLtcEnJBzrxt11W1Jo6aT-Drl&key=AIzaSyAYPHS4-q4xeQiUteFTIL8HUId7Q9Tf82k',
+			  data: data,
+			  success: function success(data) {
+			  	console.log(data);
+			  	$.each( data.items, function( key, value ) {
+			  		if (key==0) {
+			  			var title = value.snippet.title;
+				  		var imagen = value.snippet.thumbnails.high.url;
+				  		var v_id = value.snippet.resourceId.videoId;
+				  		$('.grid.contexto').append('<div class="grid_item clearfix" data="'+v_id+'"><img src="'+imagen+'" /></div>');
+			  		} else {
+				  		var title = value.snippet.title;
+				  		var imagen = value.snippet.thumbnails.high.url;
+				  		var v_id = value.snippet.resourceId.videoId;
+				  		$('.grid.contexto').append('<div class="grid_item clearfix" data="'+v_id+'"><img src="'+imagen+'" /></div>');
+			  		}
+			  	});
+			  },
+			  dataType: 'json'
+			});
+
+			$.ajax({
+			  url: 'https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=50&playlistId=PLmZsiRvDGLtd8q6CD_ad-VRAR_Br60Ruz&key=AIzaSyAYPHS4-q4xeQiUteFTIL8HUId7Q9Tf82k',
+			  data: data,
+			  success: function success(data) {
+			  	console.log(data);
+			  	$.each( data.items, function( key, value ) {
+			  		if (key==0) {
+			  			var title = value.snippet.title;
+				  		var imagen = value.snippet.thumbnails.high.url;
+				  		var v_id = value.snippet.resourceId.videoId;
+				  		$('.grid.breaking').append('<div class="grid_item clearfix" data="'+v_id+'"><img src="'+imagen+'" /></div>');
+			  		} else {
+				  		var title = value.snippet.title;
+				  		var imagen = value.snippet.thumbnails.high.url;
+				  		var v_id = value.snippet.resourceId.videoId;
+				  		$('.grid.breaking').append('<div class="grid_item clearfix" data="'+v_id+'"><img src="'+imagen+'" /></div>');
+			  		}
+			  	});
+			  },
+			  dataType: 'json'
+			});
+				
+			</script>
+			<h2>CONTEXTO</h2>
+			<div class="grid clearfix contexto"></div>
+			<h2>BREAKING NEWS</h2>
+			<div class="grid clearfix breaking"></div>
+			<ul class="notas">
+				<li class="clearfix">
+					<a href="">
+						<div class="img_frame">
+							<img src="images/uno.png">
+						</div>
+					</a>
+					<h5><a href="">Laoreet eu iaculis quis, euismod semper velit</a></h5>
+					<span class="_time">12 horas</span>
+				</li>
+				<li class="clearfix">
+					<a href="">
+						<div class="img_frame">
+							<img src="images/uno.png">
+						</div>
+					</a>
+					<h5><a href="">Laoreet eu iaculis quis, euismod semper velit</a></h5>
+					<span class="_time">12 horas</span>
+				</li>
+				<li class="clearfix">
+					<a href="">
+						<div class="img_frame">
+							<img src="images/uno.png">
+						</div>
+					</a>
+					<h5><a href="">Laoreet eu iaculis quis, euismod semper velit</a></h5>
+					<span class="_time">12 horas</span>
+				</li>
+				<li class="clearfix">
+					<a href="">
+						<div class="img_frame">
+							<img src="images/uno.png">
+						</div>
+					</a>
+					<h5><a href="">Laoreet eu iaculis quis, euismod semper velit</a></h5>
+					<span class="_time">12 horas</span>
+				</li>
+			</ul>
 			<h2>Laoreet eu iaculis quis, euismod semper velit</h2>
 			<ul>
 				<li>Nullam sit amet augue vitae ex sagittis pulvinar. <a href="">Mauris tincidunt maximus</a> turpis, sed laoreet ipsum pretium id. Phasellus at convallis lacus. Duis ac nulla at purus ultrices dignissim sit amet ac erat. Sed nec blandit risus, at venenatis quam.</li>
