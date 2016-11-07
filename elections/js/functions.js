@@ -78,7 +78,8 @@
          	dataType: 'json'
 		      })
 		   		.done(function(data) {
-
+		   			data = data.substr(0, 15);
+		   			data = data.substr(data.length - 1);
 		   			var fecha_actual = new Date();
 
 		   			$.each(data, function(index, value) {
