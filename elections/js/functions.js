@@ -78,8 +78,14 @@
          	dataType: 'json'
 		      })
 		   		.done(function(data) {
-		   			data = data.substr(0, 15);
-		   			data = data.substr(data.length - 1);
+		   			var j = JSON.stringify(data);
+		   			//console.log(j);
+		   			data = j.replace('elecccionesUSA(', '');
+		   			data = j.replace(')', '');
+
+		   			data = JSON.parse(data);
+		   			console.log(data);
+
 		   			var fecha_actual = new Date();
 
 		   			$.each(data, function(index, value) {
