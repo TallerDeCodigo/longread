@@ -79,11 +79,15 @@
 		      })
 		   		.done(function(data) {
 
+		   			var fecha_actual = new Date();
+
 		   			$.each(data, function(index, value) {
 		   				var title = '';
    						var fecha = '';
    						var link  = '';
    						var image  = '';
+   						var d  = new Date;
+
 
 		   				$.each(value, function(index, value){
 		   					//console.log(index);
@@ -93,12 +97,12 @@
 		   					if(index == 'title'){
 		   						// add title to html
 		   						title = value;
-
-
 		   					}
+
 		   					if(index == 'link'){
 		   						// add link to html	
 		   						link = value;
+
 		   						//console.log(link);
 		   					}
 		   					
@@ -111,11 +115,35 @@
 									}	
 		   						});	
 		   					}
-		   					console.log(link + '<== AQUI') ;
-		   					
 
+		   					if(index == 'pubdate'){
+		   						fecha = value;
+		   						d = new Date(fecha);
+
+		   						d = fecha_actual - d;
+
+		   						d = ((d/1000)/60)/60;
+
+		   						d = Math.round(d);
+
+
+
+		   						if(d > 24){
+		   							d =  d / 24;
+		   							d = Math.round(d);
+
+		   							d+= ' Días';
+		   						}else{
+
+		   							d+= ' Horas'
+		   						}
+
+
+
+		   					}
+		   					
 		   				});
-		   				$('#read_json').append('<div><a href="' + link + '" target="_blank"><img src="' + image + '"/></a>' + title +  '</div>');
+		   				$('.notas').append('<li class="clearfix"><a href="' + link + '"><div class="img_frame"><img src="' + image +'"></div></a><h5><a href="' + link + '">' + title +'</a></h5><span class="_time">hace ' + d + '</span></li>');
 		   			});
 
 		      	console.log("success");
