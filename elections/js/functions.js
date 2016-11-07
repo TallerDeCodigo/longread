@@ -69,6 +69,67 @@
 			}, 3000);
 		});
 
+
+        $.ajax({
+         	//url: 'http://static-feeds.esmas.com/awsfeeds/noticieros/mix/eleccionesEstadosUnidos2016.js',
+        	url: './js/json_news.json',
+         	type: 'get',
+         	//dataType: 'jsonp'
+         	dataType: 'json'
+		      })
+		   		.done(function(data) {
+
+		   			$.each(data, function(index, value) {
+		   				var title = '';
+   						var fecha = '';
+   						var link  = '';
+   						var image  = '';
+
+		   				$.each(value, function(index, value){
+		   					//console.log(index);
+		   					
+		   					//console.log(index + ' ' + value);
+
+		   					if(index == 'title'){
+		   						// add title to html
+		   						title = value;
+
+
+		   					}
+		   					if(index == 'link'){
+		   						// add link to html	
+		   						link = value;
+		   						//console.log(link);
+		   					}
+		   					
+		   					if(index == 'images'){
+		   						// add img to html
+		   						$.each(value, function(index, value){
+		   							//console.log(index + ' --- ' + value);
+		   							if(index === 'img_624x468'){
+										image = value;
+									}	
+		   						});	
+		   					}
+		   					console.log(link + '<== AQUI') ;
+		   					
+
+		   				});
+		   				$('#read_json').append('<div><a href="' + link + '" target="_blank"><img src="' + image + '"/></a>' + title +  '</div>');
+		   			});
+
+		      	console.log("success");
+		   })
+		   		.fail(function() {
+		      	console.log("error");
+		   })
+		   		.always(function() {
+		      	console.log("complete");
+   });
+
+
 	});
+
+	
 
 })(jQuery);
