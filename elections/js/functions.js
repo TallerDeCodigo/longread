@@ -124,14 +124,28 @@
 		   						if(d > 24){
 		   							d =  d / 24;
 		   							d = Math.round(d);
+<<<<<<< HEAD
 		   							d+= ' Días';
 		   						}else{
 		   							d+= ' Horas'
+=======
+		   							if (d == 1) {
+		   								d+= ' día';
+		   							} else {
+		   								d+= ' días';
+		   							}
+		   						}else{
+		   							if (d == 1) {
+		   								d+= ' hora';
+		   							} else {
+		   								d+= ' horas';
+		   							}
+>>>>>>> 255e8577dbf9596baa15cf2969125e0e3a817a31
 		   						}
 		   					}
 		   					
 		   				});
-		   				$('.notas').append('<li class="clearfix"><a href="' + link + '"><div class="img_frame"><img src="' + image +'"></div></a><h5><a href="' + link + '">' + title +'</a></h5><span class="_time">hace ' + d + '</span></li>');
+		   				$('.notas').append('<li class="clearfix"><a href="' + link + '"><div class="img_frame"><img src="' + image +'"></div></a><div class="_info"><h5><a href="' + link + '">' + title +'</a></h5><span class="_time">hace ' + d + '</span></div></li>');
 		   			});
 
 		   			
