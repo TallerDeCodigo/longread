@@ -82,7 +82,7 @@
 				A lo largo de este micrositio encontrarás la información más reciente en torno al proceso electoral en cada estado. También encontrará un amplio conjunto de artículos y material audiovisual que te ayudarán a comprender la campaña de este 2016 así como la historia y la mecánica del sistema político estadounidense. 
 			</p>
 			<h2 class="secc_title">El sistema electoral de Estados Unidos en menos de un minuto</h2>
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/QXgxApEp7xU" frameborder="0" allowfullscreen></iframe>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/MgTlLR5z4yM" frameborder="0" allowfullscreen></iframe>
 			<p>
 				El proceso electoral en Estados Unidos no es directo, sino indirecto. Cada estado realiza una elección en la que los ciudadanos depositan un voto personal en las urnas, también llamado <strong>voto popular.</strong> Asimismo, cada estado emite un número determinado de <strong>votos electorales,</strong> que puedes pensar como puntos en disputa. Juntos, los votos electorales de todos los estados y el distrito de Columbia suman 538. El ganador de la votación popular en cada estado obtiene todos los votos electorales que, de acuerdo con la densidad de población, cada estado puede otorgarle. <strong>Para ser presidente,</strong> un candidato debe obtener al menos <strong>el 50% de todos todos los votos electorales más uno, es decir, 270.</strong>
 			</p>
@@ -98,22 +98,28 @@
 				<div class="clearfix middle hc">
 					<img src="images/hc.svg">
 					<div class="stats">
-						<h5>100%</h5>
-						<span><strong>270</strong> VOTOS ELECTORALES</span>
+						<h5>0%</h5>
+						<span><strong>0</strong> VOTOS ELECTORALES</span>
 						<h3>HILLARY CLINTON</h3>
 					</div>
-					<div class="barra"></div>
+					<div class="barra"><div></div></div>
 				</div>
 				<div class="clearfix middle dt">
 					<img src="images/dt.svg">
 					<div class="stats">
-						<h5>100%</h5>
-						<span><strong>270</strong> VOTOS ELECTORALES</span>
+						<h5>0%</h5>
+						<span><strong>0</strong> VOTOS ELECTORALES</span>
 						<h3>DONALD TRUMP</h3>
 					</div>
-					<div class="barra"></div>
+					<div class="barra"><div></div></div>
 				</div>
 			</div>
+			</section>
+			<div class="special_container">
+				<div class="big_bar hc"></div>
+				<div class="big_bar dt"></div>
+			</div>
+			<section>
 			<h2 class="secc_title">¿Quién gana en cada estado?</h2>
 			<p>
 				El siguiente mapa muestra de manera detallada la repartición de los 538 votos electorales entre los 50 estados y el Distrito de Columbia.
@@ -1173,7 +1179,8 @@
 			  			var title = value.snippet.title;
 				  		var imagen = value.snippet.thumbnails.high.url;
 				  		var v_id = value.snippet.resourceId.videoId;
-				  		$('.grid.contexto').append('<div class="grid_item clearfix" data="'+v_id+'"><img src="'+imagen+'" /></div>');
+				  		$('#iframe').attr('src',"https://www.youtube.com/embed/"+v_id);
+				  		// $('.grid.contexto').append('<div class="grid_item clearfix" data="'+v_id+'"><img src="'+imagen+'" /></div>');
 			  		} else {
 				  		var title = value.snippet.title;
 				  		var imagen = value.snippet.thumbnails.high.url;
@@ -1209,15 +1216,21 @@
 			
 		</script>
 		<section>	
-			<h2 class="secc_title">Sigue el proceso electoral<br>minuto a minuto</h2>
+			<h2 class="secc_title">Minuto a minuto</h2>
+			<p>
+				Lee aquí toda la información sobre las #EleccionesEU hasta el momento:
+			</p>
 			<ul class="notas"></ul>
+			<p>
+				Revive aquí lo más importante de este proceso electoral hasta el momento:
+			</p>
 			<div class="grid clearfix breaking"></div>
 			<h2 class="secc_title">#EleccionesEU 2016 a profundidad</h2>
 			<p>
 				Encuentra en los siguientes artículos y videos información pormenorizada sobre la mecánica del proceso electoral en Estados Unidos, la historia de su sistema político y el contexto para comprender la cerrada contienda de este 2016.
 			</p>
+			<iframe id="iframe" width="560" height="315" src="https://www.youtube.com/embed/e9waJKOMxpI" frameborder="0" allowfullscreen></iframe>
 			<div class="grid clearfix contexto"></div>
-			<h2 class="secc_title">SIGUE LA CONVERSACIÓN<br>EN REDES SOCIALES</h2>
 		</section>
 		<footer>
 			<div class="clearfix">

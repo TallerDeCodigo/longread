@@ -26,6 +26,11 @@
     	    //$('.info_box').css({left:  e.pageX-120,top:   e.pageY-165});
     	});
 
+		$(document).on('click', 'li.more', function(e) {
+			$(this).hide();
+			$('.hides').show();
+		});
+
     	$("#map1 .state").on( "click", function(e) {
     		var tip = $('.info_box.map1').height()+45;
     		$('.info_box.map1').css({left:  e.pageX - 120,top:   e.pageY - tip});
@@ -77,6 +82,10 @@
 			}, 3000);
 		});
 
+		var total = 538;
+		var suma_hc = 0;
+		var suma_dt = 0;
+
 		$.ajax({
         		url: 'http://lisa.mx/clientes/elecciones/presidencia.php',
          		type: 'get',
@@ -92,17 +101,36 @@
 			   			var demo = '';
 			   			var repu = '';
 			   			var tend = '';
+			   			var siva1 = false;
+			   			var siva2 = false;
 			   			console.log(value);
    			   			$.each(value, function(key, value) {
    				   			if (key == 'Estado') { etdo = value }
    				   			if (key == 'Abr') { abre = value }
    				   			if (key == 'Ve') { voto = value }
-   				   			if (key == 'Porcentaje') { peso = parseFloat(value); peso = peso * 100; peso = peso.toFixed(2) + '%'; console.log(parseInt(value));}
+   				   			if (key == 'Porcentaje') { peso = parseFloat(value); peso = peso * 100; peso = peso.toFixed(2) + '%'; }
    				   			if (key == 'Hora') { hora = value }
    				   			if (key == 'Tendencia') { tend = value }
    				   			if (key == 'Democratas') { demo = value }
    				   			if (key == 'Republicanos') { repu = value }
+   				   			if (key == 'Votos_d') { suma_hc += parseInt(value); if (value!=0) { siva1=true } }
+   				   			if (key == 'Votos_r') { suma_dt += parseInt(value); if (value!=0) { siva2=true } }
    			   			});
+
+   			   			if (siva1) {
+   			   				$('.big_bar.hc').append('<div data-name="'+abre+'" style="width:'+peso+';"></div>');
+   			   			}
+   			   			if (siva2) {
+   			   				$('.big_bar.dt').append('<div data-name="'+abre+'" style="width:'+peso+';"></div>');
+   			   			}
+
+   			   			$(".big_bar.hc div").each(function(){
+		   			        if ($(this).attr('data-name') === '') {
+		   			            $(this).remove();
+		   			        }                               
+		   			    });
+   			   			
+
    			   			$('#map1 .state[data-name="'+abre+'"]').attr('full-name',etdo);
    			   			$('#map1 .state[data-name="'+abre+'"]').attr('votos',voto);
    			   			$('#map1 .state[data-name="'+abre+'"]').attr('peso',peso);
@@ -119,6 +147,19 @@
    			   			$('#map2 .state[data-name="'+abre+'"]').attr('republicano',repu);
    			   			$('#map2 .state[data-name="'+abre+'"]').attr('tendencia',tend);
 		   			});
+
+		   			var calculo1 = (suma_hc/270)*100;
+		   			$('.middle.hc barra div').width(calculo1+'%');
+		   			$('.middle.hc h5').html(calculo1+'%');
+		   			$('.middle.hc span strong').html(suma_hc);
+
+		   			var calculo2 = (suma_dt/270)*100;
+		   			$('.middle.dt barra div').width(calculo2+'%');
+		   			$('.middle.dt h5').html(calculo2+'%');
+		   			$('.middle.dt span strong').html(suma_dt);
+
+		   			var calculo3 = total - suma_hc - suma_dt;
+		   			$('.versus p strong').html(calculo3);
 
 			   }).fail(function() {
 			      	console.log("fail");
@@ -203,7 +244,7 @@
 		   					$('.notas').append('<li class="hides clearfix"><a href="' + link + '"><div class="img_frame"><img src="' + image +'"></div></a><div class="_info"><h5><a href="' + link + '">' + title +'</a></h5><span class="_time">hace ' + d + '</span></div></li>');
 		   				}
 		   				if (contador == 10) {
-		   					$('.notas').append('<li class="more clearfix"><a><div class="img_frame"></div></a><div class="_info"><h5><a>Ver más notas relacionadas</a></h5><span class="_time">hace ' + d + '</span></div></li>');
+		   					$('.notas').append('<li class="more clearfix"><a><div class="img_frame">+</div></a><div class="_info"><h5><a>Ver más notas relacionadas</a></h5></div></li>');
 		   				}
 		   				contador++;
 		   			});
