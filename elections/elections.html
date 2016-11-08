@@ -1185,7 +1185,7 @@
 				  		var title = value.snippet.title;
 				  		var imagen = value.snippet.thumbnails.high.url;
 				  		var v_id = value.snippet.resourceId.videoId;
-				  		$('.grid.contexto').append('<div class="grid_item clearfix" data="'+v_id+'"><img src="'+imagen+'" /></div>');
+				  		$('.grid.contexto').append('<div class="grid_item contexto clearfix" data="'+v_id+'"><img src="'+imagen+'" /></div>');
 			  		}
 			  	});
 			  },
@@ -1202,12 +1202,12 @@
 			  			var title = value.snippet.title;
 				  		var imagen = value.snippet.thumbnails.high.url;
 				  		var v_id = value.snippet.resourceId.videoId;
-				  		$('.grid.breaking').append('<div class="grid_item clearfix" data="'+v_id+'"><img src="'+imagen+'" /></div>');
+				  		$('.grid.breaking').append('<div class="grid_item breaking clearfix" data="'+v_id+'"><img src="'+imagen+'" /></div>');
 			  		} else {
 				  		var title = value.snippet.title;
 				  		var imagen = value.snippet.thumbnails.high.url;
 				  		var v_id = value.snippet.resourceId.videoId;
-				  		$('.grid.breaking').append('<div class="grid_item clearfix" data="'+v_id+'"><img src="'+imagen+'" /></div>');
+				  		$('.grid.breaking').append('<div class="grid_item breaking clearfix" data="'+v_id+'"><img src="'+imagen+'" /></div>');
 			  		}
 			  	});
 			  },
@@ -1224,6 +1224,9 @@
 			<p>
 				Revive aquí lo más importante de este proceso electoral hasta el momento:
 			</p>
+			<div class="frame_container" style="display:none">
+				<iframe id="iframe1" width="560" height="315" src="https://www.youtube.com/embed/e9waJKOMxpI" frameborder="0" allowfullscreen></iframe>
+			</div>
 			<div class="grid clearfix breaking"></div>
 			<h2 class="secc_title">#EleccionesEU 2016 a profundidad</h2>
 			<p>
