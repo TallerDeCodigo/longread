@@ -174,8 +174,8 @@
    		});
 
         $.ajax({
-         	//url: 'http://static-feeds.esmas.com/awsfeeds/noticieros/mix/eleccionesEstadosUnidos2016.js',
-        		url: './js/json_news.json',
+         		url: 'http://static-feeds.esmas.com/awsfeeds/noticieros/mix/eleccionesEstadosUnidos2016.js',
+        		//url: './js/json_news.json',
          		type: 'get',
          		dataType: 'jsonp',
          		jsonpCallback: 'elecccionesUSA',
