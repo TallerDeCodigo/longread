@@ -139,10 +139,10 @@ nav.share a.fb {background:url(images/iconos.png) no-repeat;background-position:
 nav.share a.tw {background:url(images/iconos.png) no-repeat;background-position:-5px -78px;background-size:42px auto;}
 nav.share a.wp {background:url(images/iconos.png) no-repeat;background-position:-5px -42px;background-size:42px auto;display:none;}
 
-.overscreen {position:fixed;left:0px;top:0px;width:100%;height:100%;background:rgba(0,0,0,0.8);z-index:200;display:none;}
+/*.overscreen {position:fixed;left:0px;top:0px;width:100%;height:100%;background:rgba(0,0,0,0.8);z-index:200;display:none;}
 .overscreen .rotate {width:70%;position:absolute;left:15%;top:50%;margin-top:-80px;text-align:center;}
 .overscreen .rotate img {display:inline-block;width:auto;height:auto;}
-.overscreen .rotate p {color:#EFEFEF;font-family:'Arial';margin-bottom:0;margin-top:10px;}
+.overscreen .rotate p {color:#EFEFEF;font-family:'Arial';margin-bottom:0;margin-top:10px;}*/
 
 h1 {display:none;}
 h2.secc_title {text-align:center;font-family:'Roboto';text-transform:uppercase;font-size:34px;border-top:3px solid #333;border-bottom:3px solid #333;line-height:37px;padding:2px 0px 5px;margin:35px 0px 25px;}
@@ -273,8 +273,8 @@ div.akamai {
 }
 
 @media screen and (max-width:800px) and (orientation:portrait) {
-    .overscreen {display:block;}
-    body {overflow:hidden;}
+    /*.overscreen {display:block;}
+    body {overflow:hidden;}*/
 }
 
 @media (min-width:601px) {
@@ -283,13 +283,14 @@ div.akamai {
 }
 
 @media (max-width:600px) {
-	h1 {font-size:32px;width:80%;}
-	h2 {font-size:24px;width:80%;}
+	h1 {font-size:32px;/*width:80%;*/}
+	h2 {font-size:24px;/*width:80%;*/}
 	h3 {font-size:20px;}
+	h2.secc_title {font-size:26px;}
 	p, li {font-size:18px;line-height:30px;}
 	table {font-size:16px;}
 	p.subtitle {font-size:23px;}
-	span {font-size:14px;padding:0px 20px;margin-bottom:20px;}
+	/*span {font-size:14px;padding:0px 20px;margin-bottom:20px;}*/
 	section img {margin-top:0px;}
 	section {margin-top:20px;}
 	section:not(:last-of-type):after {margin-bottom:30px;position:relative;top:-12px;}
@@ -297,15 +298,23 @@ div.akamai {
 	div.grid_item {width:49%;padding-bottom:27.5%;margin-right:1%;margin-bottom:1%;}
 	div.grid_item:nth-of-type(2n) {margin-right:0px;}
 	a.wp {display:block!important;}
+
+	.middle img {width:98px;margin-bottom:30px;}
+	.versus {margin-top:0px;}
+	.versus p {top:-15px;}
+	#map1, #map2 {width:95%;}
+	footer ul {display:none;}
+	li.more .img_frame {bottom:0px!important;top:auto!important;}
 }
 
 @media (max-width:330px) {
-	h1 {font-size:30px;width:80%;}
-	h2 {font-size:22px;width:80%;}
+	h1 {font-size:30px;/*width:80%;*/}
+	h2 {font-size:22px;/*width:80%;*/}
+	h2.secc_title {font-size:20px;}
 	h3 {font-size:18px;}
 	p, li {font-size:16px;line-height:28px;}
 	table {font-size:14px;}
 	p.subtitle {font-size:21px;}
-	span {font-size:12px;padding:0px 20px;margin-bottom:20px;}
+	/*span {font-size:12px;padding:0px 20px;margin-bottom:20px;}*/
 }
 

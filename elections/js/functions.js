@@ -36,6 +36,12 @@
 			$('.notas_nt .hides').show();
 		});
 
+		$(document).on('click', '.grid_item', function(e) {
+            var position = $('#iframe').offset().top-90;
+            $('body').animate({scrollTop: position}, 600);
+            $('#iframe').attr('src',"https://www.youtube.com/embed/"+$(this).attr('data')+"?autoplay=1");
+        });
+
     	$("#map1 .state").on( "click", function(e) {
     		var tip = $('.info_box.map1').height()+45;
     		$('.info_box.map1').css({left:  e.pageX - 120,top:   e.pageY - tip});
