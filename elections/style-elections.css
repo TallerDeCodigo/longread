@@ -299,6 +299,10 @@ div.akamai {
 	div.grid_item:nth-of-type(2n) {margin-right:0px;}
 	a.wp {display:block!important;}
 
+	.info_box {position:relative;left:0px!important;top:15px!important;width:100%!important;}
+	.info_box.map1 {margin-bottom:30px;}
+	.info_box:after {border:none!important;}
+
 	.middle img {width:98px;margin-bottom:30px;}
 	.versus {margin-top:0px;}
 	.versus p {top:-15px;}
@@ -316,5 +320,6 @@ div.akamai {
 	table {font-size:14px;}
 	p.subtitle {font-size:21px;}
 	/*span {font-size:12px;padding:0px 20px;margin-bottom:20px;}*/
+
 }
 
