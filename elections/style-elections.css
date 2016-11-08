@@ -46,15 +46,7 @@ figure {margin:0;}
 /*** FONT FACE ***/
 
 @font-face {
-	font-family:'Relative_12';
-	src:url('fonts/Relative-12pitch.eot');
-	src:local('☺'), url('fonts/Relative-12pitch.woff') format('woff'), url('fonts/Relative-12pitch.ttf') format('truetype'), url('fonts/Relative-12pitch.svg') format('svg');
-	font-weight:normal;
-	font-style:normal;
-}
-
-@font-face {
-	font-family:'Relative_Bold';
+	font-family:'Relative-Bold';
 	src:url('fonts/Relative-Bold.eot');
 	src:local('☺'), url('fonts/Relative-Bold.woff') format('woff'), url('fonts/Relative-Bold.ttf') format('truetype'), url('fonts/Relative-Bold.svg') format('svg');
 	font-weight:bold;
