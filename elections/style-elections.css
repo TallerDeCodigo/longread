@@ -167,7 +167,7 @@ div.grid_item img {width:100%;height:auto;margin:0;position:absolute;top:-9999px
 #map2 svg g polygon, #map2 svg g polyline {-webkit-transition:.15s ease-in-out;-moz-transition:.15s ease-in-out;-o-transition:.15s ease-in-out;transition:.15s ease-in-out;}
 #map2 svg g:hover polygon, #map2 svg g:hover polyline {fill:#8c8c99;}
 
-.info_box {position:absolute;float:left;width:250px;background:#F9F9F9;text-align:left;padding:10px 5px 15px 14px;z-index:100;opacity:0;box-shadow:0px 0px 2px rgba(0,0,0,0.2);}
+.info_box {position:absolute;float:left;background:#F9F9F9;text-align:left;padding:10px 18px 15px 14px;z-index:100;opacity:0;box-shadow:0px 0px 2px rgba(0,0,0,0.2);}
 .info_box.active {opacity:1;}
 .info_box:after {content:"";position:absolute;width:0; height:0; border-left:10px solid transparent;border-right:10px solid transparent;border-top:10px solid #F0F0F0;left:50%;bottom:-10px;margin-left:-10px;z-index:150;}
 .info_box h3 {font-family: 'Montserrat', sans-serif;margin:0;color:#3F3F3F;margin-bottom:5px;}
@@ -175,7 +175,7 @@ div.grid_item img {width:100%;height:auto;margin:0;position:absolute;top:-9999px
 .info_box table tr {background:none;border:0;}
 .info_box table th, .info_box table td {padding:0;font-family: 'Montserrat', sans-serif;border:0;}
 .info_box table th {color:#666;}
-.info_box table td {color:#3F3F3F;padding-left:10px;}
+.info_box table td {color:#3F3F3F;padding-left:10px;white-space:nowrap;}
 .info_box table td.subt {padding-left:0px;}
 .info_box table span:nth-of-type(1) {color:#003594;}
 .info_box table span:nth-of-type(2) {color:#EB0029;}

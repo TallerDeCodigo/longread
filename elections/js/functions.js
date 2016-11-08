@@ -51,7 +51,8 @@
 
     	$("#map1 .state").on( "click", function(e) {
     		var tip = $('.info_box.map1').height()+45;
-    		$('.info_box.map1').css({left:  e.pageX - 120,top:   e.pageY - tip});
+    		var tip2 = ($('.info_box.map1').width()+32)/2;
+    		$('.info_box.map1').css({left:  e.pageX - tip2,top:   e.pageY - tip});
     		$('.info_box.map1 h3').html($(this).attr('full-name'));
     		$('.info_box.map1 th.ve').html($(this).attr('votos'));
     		$('.info_box.map1 th.peso').html($(this).attr('peso')+'%');
@@ -71,7 +72,8 @@
 
     	$("#map2 .state").on( "click", function(e) {
     		var tip = $('.info_box.map2').height()+45;
-    		$('.info_box.map2').css({left:  e.pageX - 120,top:   e.pageY - tip});
+    		var tip2 = ($('.info_box.map1').width()+9)/2;
+    		$('.info_box.map2').css({left:  e.pageX - tip2,top:   e.pageY - tip});
     		$('.info_box.map2 h3').html($(this).attr('full-name'));
     		$('.info_box.map2 th.ve').html($(this).attr('votos'));
     		$('.info_box.map2 span.demo').html($(this).attr('democrata'));
