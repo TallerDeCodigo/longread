@@ -29,6 +29,10 @@
     	$("#map1 .state").on( "click", function(e) {
     		var tip = $('.info_box.map1').height()+45;
     		$('.info_box.map1').css({left:  e.pageX - 120,top:   e.pageY - tip});
+    		$('.info_box.map1 h3').html($(this).attr('full-name'));
+    		$('.info_box.map1 th.ve').html($(this).attr('votos'));
+    		$('.info_box.map1 th.peso').html($(this).attr('peso'));
+    		$('.info_box.map1 th.hora').html($(this).attr('hora'));
     		$('.info_box.map1').show();
     		setTimeout(function() {
 				$('.info_box.map1').addClass('active');
@@ -45,6 +49,10 @@
     	$("#map2 .state").on( "click", function(e) {
     		var tip = $('.info_box.map2').height()+45;
     		$('.info_box.map2').css({left:  e.pageX - 120,top:   e.pageY - tip});
+    		$('.info_box.map2 h3').html($(this).attr('full-name'));
+    		$('.info_box.map2 th.ve').html($(this).attr('votos'));
+    		$('.info_box.map2 span.demo').html($(this).attr('democrata'));
+    		$('.info_box.map2 span.repu').html($(this).attr('republicano'));
     		$('.info_box.map2').show();
     		setTimeout(function() {
 				$('.info_box.map2').addClass('active');
@@ -69,6 +77,55 @@
 			}, 3000);
 		});
 
+		$.ajax({
+        		url: 'http://lisa.mx/clientes/elecciones/presidencia.php',
+         		type: 'get',
+         		dataType: 'json'
+		      })
+		   		.done(function(data) {
+		   			$.each(data, function(key, value) {
+			   			var etdo = '';
+			   			var abre = '';
+			   			var voto = '';
+			   			var peso = '';
+			   			var hora = '';
+			   			var demo = '';
+			   			var repu = '';
+			   			var tend = '';
+			   			console.log(value);
+   			   			$.each(value, function(key, value) {
+   				   			if (key == 'Estado') { etdo = value }
+   				   			if (key == 'Abr') { abre = value }
+   				   			if (key == 'Ve') { voto = value }
+   				   			if (key == 'Porcentaje') { peso = parseFloat(value); peso = peso * 100; peso = peso.toFixed(2) + '%'; console.log(parseInt(value));}
+   				   			if (key == 'Hora') { hora = value }
+   				   			if (key == 'Tendencia') { tend = value }
+   				   			if (key == 'Democratas') { demo = value }
+   				   			if (key == 'Republicanos') { repu = value }
+   			   			});
+   			   			$('#map1 .state[data-name="'+abre+'"]').attr('full-name',etdo);
+   			   			$('#map1 .state[data-name="'+abre+'"]').attr('votos',voto);
+   			   			$('#map1 .state[data-name="'+abre+'"]').attr('peso',peso);
+   			   			$('#map1 .state[data-name="'+abre+'"]').attr('hora',hora);
+   			   			$('#map1 .state[data-name="'+abre+'"]').attr('democrata',demo);
+   			   			$('#map1 .state[data-name="'+abre+'"]').attr('republicano',repu);
+   			   			$('#map1 .state[data-name="'+abre+'"]').attr('tendencia',tend);
+
+   			   			$('#map2 .state[data-name="'+abre+'"]').attr('full-name',etdo);
+   			   			$('#map2 .state[data-name="'+abre+'"]').attr('votos',voto);
+   			   			$('#map2 .state[data-name="'+abre+'"]').attr('peso',peso);
+   			   			$('#map2 .state[data-name="'+abre+'"]').attr('hora',hora);
+   			   			$('#map2 .state[data-name="'+abre+'"]').attr('democrata',demo);
+   			   			$('#map2 .state[data-name="'+abre+'"]').attr('republicano',repu);
+   			   			$('#map2 .state[data-name="'+abre+'"]').attr('tendencia',tend);
+		   			});
+
+			   }).fail(function() {
+			      	console.log("fail");
+
+			   }).always(function() {
+			      	console.log("complete");
+   		});
 
         $.ajax({
          	//url: 'http://static-feeds.esmas.com/awsfeeds/noticieros/mix/eleccionesEstadosUnidos2016.js',
@@ -87,6 +144,7 @@
 		   			data = j.replace('elecccionesUSA(', '');
 		   			data = j.replace(')', '');
 		   			data = JSON.parse(data);
+		   			var contador = 1;
 
 		   			$.each(data, function(index, value) {
 		   				var title = '';
@@ -139,7 +197,15 @@
 		   					}
 		   					
 		   				});
-		   				$('.notas').append('<li class="clearfix"><a href="' + link + '"><div class="img_frame"><img src="' + image +'"></div></a><div class="_info"><h5><a href="' + link + '">' + title +'</a></h5><span class="_time">hace ' + d + '</span></div></li>');
+		   				if (contador < 11) {
+		   					$('.notas').append('<li class="clearfix"><a href="' + link + '"><div class="img_frame"><img src="' + image +'"></div></a><div class="_info"><h5><a href="' + link + '">' + title +'</a></h5><span class="_time">hace ' + d + '</span></div></li>');
+		   				} else {
+		   					$('.notas').append('<li class="hides clearfix"><a href="' + link + '"><div class="img_frame"><img src="' + image +'"></div></a><div class="_info"><h5><a href="' + link + '">' + title +'</a></h5><span class="_time">hace ' + d + '</span></div></li>');
+		   				}
+		   				if (contador == 10) {
+		   					$('.notas').append('<li class="more clearfix"><a><div class="img_frame"></div></a><div class="_info"><h5><a>Ver más notas relacionadas</a></h5><span class="_time">hace ' + d + '</span></div></li>');
+		   				}
+		   				contador++;
 		   			});
 
 		   			

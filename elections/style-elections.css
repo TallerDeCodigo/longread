@@ -144,6 +144,7 @@ nav.share a.wp {background:url(images/iconos.png) no-repeat;background-position:
 .overscreen .rotate img {display:inline-block;width:auto;height:auto;}
 .overscreen .rotate p {color:#EFEFEF;font-family:'Arial';margin-bottom:0;margin-top:10px;}
 
+h1 {display:none;}
 h2.secc_title {text-align:center;font-family:'Roboto';text-transform:uppercase;font-size:34px;border-top:3px solid #333;border-bottom:3px solid #333;line-height:37px;padding:2px 0px 5px;margin:30px 0px 20px;}
 img.portada {width:100%;height:auto;margin-bottom:30px;}
 
@@ -153,7 +154,7 @@ div.grid_item img {width:100%;height:auto;margin:0;position:absolute;top:-9999px
 
 /*MAPA 1*/
 
-#map1 {width:90%;max-width:1280px;margin:0 auto;margin-top:20px;}
+#map1 {width:85%;max-width:1280px;margin:20px auto;}
 
 #map1 svg {width:100%;position:relative;left:-2.5%;}
 #map1 svg text {font-size:7px;font-family:'Alegreya Sans', sans-serif;fill:#FFF;letter-spacing:0.03em;}
@@ -162,7 +163,7 @@ div.grid_item img {width:100%;height:auto;margin:0;position:absolute;top:-9999px
 #map1 svg .state:hover {fill:#333;}
 #map1 svg .state:hover :after {content:"hover";background:gold;width:100px;height:100px;position:absolute;left:0px;top:0px;}
 
-#map2 {width:90%;max-width:1280px;margin:0 auto;margin-bottom:20px;}
+#map2 {width:85%;max-width:1280px;margin:0 auto;margin-bottom:20px;}
 #map2 svg {width:100%;}
 
 #map2 svg polygon, #map2 svg polyline {stroke:#FFF;stroke-width:0.12rem;}
@@ -182,7 +183,7 @@ div.grid_item img {width:100%;height:auto;margin:0;position:absolute;top:-9999px
 #map2 svg g polygon, #map2 svg g polyline {-webkit-transition:.15s ease-in-out;-moz-transition:.15s ease-in-out;-o-transition:.15s ease-in-out;transition:.15s ease-in-out;}
 #map2 svg g:hover polygon, #map2 svg g:hover polyline {fill:#8c8c99;}
 
-.info_box {position:absolute;float:left;width:240px;background:#F9F9F9;text-align:left;padding:10px 5px 15px 14px;z-index:100;opacity:0;box-shadow:0px 0px 2px rgba(0,0,0,0.2);}
+.info_box {position:absolute;float:left;width:250px;background:#F9F9F9;text-align:left;padding:10px 5px 15px 14px;z-index:100;opacity:0;box-shadow:0px 0px 2px rgba(0,0,0,0.2);}
 .info_box.active {opacity:1;}
 .info_box:after {content:"";position:absolute;width:0; height:0; border-left:10px solid transparent;border-right:10px solid transparent;border-top:10px solid #F0F0F0;left:50%;bottom:-10px;margin-left:-10px;z-index:150;}
 .info_box h3 {font-family:'Relative-Bold';margin:0;color:#3F3F3F;margin-bottom:5px;}
@@ -195,6 +196,7 @@ div.grid_item img {width:100%;height:auto;margin:0;position:absolute;top:-9999px
 .info_box table span:nth-of-type(1) {color:#003594;}
 .info_box table span:nth-of-type(2) {color:#EB0029;}
 
+.versus {margin-top:-55px;}
 .versus .middle {float:left;width:50%;text-align:center;}
 .versus img {width:230px;height:auto;display:inline-block;}
 .versus .stats {position:relative;top:-24px;}
@@ -207,9 +209,10 @@ div.grid_item img {width:100%;height:auto;margin:0;position:absolute;top:-9999px
 .versus .barra {width:100%;height:42px;position:relative;top:-15px;}
 .versus .hc .barra {background:#003594;}
 .versus .dt .barra {background:#EB0029;}
+.versus p {line-height:24px;margin:0;padding:0;text-align:center;font-family:'Relative-Bold';font-size:22px;position:relative;top:55px;}
 
-ul.notas {list-style:none;margin:0;padding:0;border-left:2px dashed #C0C0C0;margin-left:40px;/*padding-top:30px;*/}
-ul.notas li {min-height:80px;position:relative;left:-40px;line-height:24px;display:table;}
+ul.notas {list-style:none;margin:0;padding:0;border-left:2px dashed #C0C0C0;margin-left:42px;/*padding-top:30px;*/}
+ul.notas li {min-height:80px;position:relative;left:-42px;line-height:24px;display:table;}
 ul.notas li .img_frame {width:80px;height:80px;position:absolute;border-radius:50%;overflow:hidden;background:#F0F0F0;left:0px;top:0px;}
 ul.notas li .img_frame img {width:auto;height:100%;margin:0;position:absolute;top:-9999px;bottom:-9999px;left:-9999px;right:-9999px;margin:auto;}
 
@@ -217,6 +220,8 @@ ul.notas li div._info {display:table-cell;vertical-align:middle;}
 ul.notas li h5 {padding-left:95px;}
 ul.notas li span {padding-left:95px;display:block;font-size:14px;opacity:0.75;}
 ul.notas li h5 a {text-decoration:none;border:none;}
+
+p.rules {opacity:0.75;font-size:14px;line-height:24px;margin-top:-10px;font-style:italic;}
 
 @media (max-width:900px) {
 	ins {display:none;}
