@@ -26,9 +26,14 @@
     	    //$('.info_box').css({left:  e.pageX-120,top:   e.pageY-165});
     	});
 
-		$(document).on('click', 'li.more', function(e) {
+		$(document).on('click', '.notas li.more', function(e) {
 			$(this).hide();
-			$('.hides').show();
+			$('.notas .hides').show();
+		});
+
+		$(document).on('click', '.notas_nt li.more', function(e) {
+			$(this).hide();
+			$('.notas_nt .hides').show();
 		});
 
     	$("#map1 .state").on( "click", function(e) {
