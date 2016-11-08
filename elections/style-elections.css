@@ -154,7 +154,6 @@ div.grid_item img {width:100%;height:auto;margin:0;position:absolute;top:-9999px
 #map1 svg text.black {fill:#bfbfbf;font-weight:700;}
 #map1 svg .state {fill:#bfbfbf;stroke:#fff;stroke-width:0.07rem;-webkit-transition:.15s ease-in-out;-moz-transition:.15s ease-in-out;-o-transition:.15s ease-in-out;transition:.15s ease-in-out;}
 #map1 svg .state:hover {fill:#333;}
-#map1 svg .state:hover :after {content:"hover";background:gold;width:100px;height:100px;position:absolute;left:0px;top:0px;}
 
 #map2 {width:85%;max-width:1280px;margin:0 auto;margin-bottom:20px;}
 #map2 svg {width:100%;}
@@ -190,7 +189,7 @@ div.grid_item img {width:100%;height:auto;margin:0;position:absolute;top:-9999px
 .info_box table span:nth-of-type(2) {color:#EB0029;}
 
 .versus {margin-top:-35px;margin-bottom:-20px;}
-.versus .middle {float:left;width:50%;text-align:center;}
+.versus .middle {float:left;width:50%;text-align:center;position:relative;}
 .versus img {width:230px;height:auto;display:inline-block;}
 .versus .stats {position:relative;top:-24px;}
 .versus .hc .stats {text-align:left;color:#003594;}
@@ -199,12 +198,14 @@ div.grid_item img {width:100%;height:auto;margin:0;position:absolute;top:-9999px
 .stats h3 {font-family:'Relative-Bold';font-size:32px;margin:0;}
 .stats span {font-family:'Relative-Bold';font-size:18px;}
 
+.versus .meta {width:4px;height:42px;position:absolute;bottom:15px;left:-2px;background:#FFF;border:2px dashed #000;}
+.versus .meta:after {content:"270";position:absolute;bottom:105%;width:44px;background:gold;font-family:'Roboto';font-weight:bold;left:50%;margin-left:-22px;margin-bottom:10px;font-size:18px;}
 .versus .barra {width:100%;height:42px;position:relative;top:-15px;overflow:hidden;}
-.versus .barra div {height:42px;width:0%;position:absolute;top:0px;}
+.versus .barra div {height:42px;width:0%;position:absolute;top:0px;-webkit-transition:.25s ease-in-out;-moz-transition:.25s ease-in-out;-o-transition:.25s ease-in-out;transition:.25s ease-in-out;}
 .versus .hc .barra div {left:0px;background:#003594;}
 .versus .dt .barra div {right:0px;background:#EB0029;}
-.versus .hc .barra {background:#3A92FC;}
-.versus .dt .barra {background:#FC90AD;}
+.versus .hc .barra {background:#bfbfbf;}
+.versus .dt .barra {background:#bfbfbf;}
 .versus p {line-height:24px;margin:0;padding:0;text-align:center;font-family:'Relative-Bold';font-size:22px;position:relative;top:55px;}
 .versus p strong {font-size:36px;}
 
