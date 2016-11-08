@@ -146,6 +146,7 @@ nav.share a.wp {background:url(images/iconos.png) no-repeat;background-position:
 
 h1 {display:none;}
 h2.secc_title {text-align:center;font-family:'Roboto';text-transform:uppercase;font-size:34px;border-top:3px solid #333;border-bottom:3px solid #333;line-height:37px;padding:2px 0px 5px;margin:35px 0px 25px;}
+h3.break {background:#000;color:#FFF;margin:-8px 0px 10px;padding:3px 2px;}
 img.portada {width:100%;height:auto;margin-bottom:25px;}
 
 div.grid {width:100%;margin-bottom:35px;}
@@ -241,8 +242,9 @@ ul.notas li h5 {padding-left:95px;}
 ul.notas li span {padding-left:95px;display:block;font-size:14px;opacity:0.75;}
 ul.notas li h5 a {text-decoration:none;border:none;}
 
-ul.notas_nt {list-style:none;margin:0;padding:0;border-left:2px dashed #C0C0C0;margin-left:42px;/*padding-top:30px;*/}
-ul.notas_nt li {min-height:80px;position:relative;left:-42px;line-height:24px;display:table;}
+ul.notas_nt {list-style:none;margin:0;padding:0;border-left:2px dashed #C0C0C0;margin-left:41px;/*padding-top:30px;*/margin-top:30px;margin-bottom:60px;}
+ul.notas_nt li {min-height:80px;position:relative;left:-41px;line-height:24px;display:table;}
+ul.notas_nt li.hides {display:none;}
 ul.notas_nt li .img_frame {width:80px;height:80px;position:absolute;border-radius:50%;overflow:hidden;background:#C0C0C0;left:0px;top:0px;}
 ul.notas_nt li .img_frame img {width:auto;height:100%;margin:0;position:absolute;top:-9999px;bottom:-9999px;left:-9999px;right:-9999px;margin:auto;}
 
@@ -250,6 +252,9 @@ ul.notas_nt li div._info {display:table-cell;vertical-align:middle;}
 ul.notas_nt li h5 {padding-left:95px;}
 ul.notas_nt li span {padding-left:95px;display:block;font-size:14px;opacity:0.75;}
 ul.notas_nt li h5 a {text-decoration:none;border:none;}
+
+ul.notas_nt li.more {min-height:36px;cursor:pointer;}
+ul.notas_nt li.more .img_frame {width:36px;height:36px;position:absolute;border-radius:50%;overflow:hidden;background:#C0C0C0;left:23px;top:0px;text-align:center;line-height:34px;color:#FFF;font-size:36px;}
 
 
 p.rules {opacity:0.75;font-size:14px;line-height:24px;margin-top:-10px;font-style:italic;}
