@@ -132,7 +132,7 @@
 			   			var siva2 = false;
 			   			var peso_hc = 0;
 						var peso_dt = 0;
-			   			console.log(value);
+			   			// console.log(value);
    			   			$.each(value, function(key, value) {
    				   			if (key == 'Estado') { etdo = value }
    				   			if (key == 'Abr') { abre = value }
