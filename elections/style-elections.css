@@ -191,7 +191,7 @@ div.grid_item img {width:100%;height:auto;margin:0;position:absolute;top:-9999px
 .versus {margin-top:-35px;margin-bottom:-20px;}
 .versus .middle {float:left;width:50%;text-align:center;position:relative;}
 .versus img {width:230px;height:auto;display:inline-block;}
-.versus .stats {position:relative;top:-24px;}
+.versus .stats {position:relative;top:-20px;}
 .versus .hc .stats {text-align:left;color:#003594;}
 .versus .dt .stats {text-align:right;color:#EB0029;}
 .stats h5 {font-family:'Relative-Bold';font-size:44px;}
