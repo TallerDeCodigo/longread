@@ -209,7 +209,7 @@ div.grid_item img {width:100%;height:auto;margin:0;position:absolute;top:-9999px
 .versus p {line-height:24px;margin:0;padding:0;text-align:center;font-family:'Relative-Bold';font-size:22px;position:relative;top:55px;}
 .versus p strong {font-size:36px;}
 
-.special_container {width:100%;padding:0px 20px;}
+.special_container {width:100%;padding:0px 20px;position:relative;top:15px;}
 .big_bar {width:100%;height:60px;margin-top:20px;display:none;}
 .big_bar.hc {background:#003594;}
 .big_bar.dt {background:#EB0029;}

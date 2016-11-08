@@ -156,15 +156,17 @@
 	   			   				$('.big_bar.dt').append('<div data-name="'+abre+'" style="width:'+nuevo+'%;"></div>');
 	   			   			}
 
+   			   				if (siva1 || siva2) {
    			   				if (peso_hc>peso_dt) {
    			   					$('#map1 .state[data-name="'+abre+'"]').css('fill','#003594');
    			   				} else {
    			   					$('#map1 .state[data-name="'+abre+'"]').css('fill','#EB0029');
    			   				}
-   			   				$('#map2 g.state[data-name="'+abre+'"] polygon').css('fill','#EB0029');
-		   					for (var i = 1; i <= peso_hc; i++) {
-		   						$('#map2 g.state[data-name="'+abre+'"] polygon:nth-of-type('+i+')').css('fill','#003594');
-		   					}
+	   			   				$('#map2 g.state[data-name="'+abre+'"] polygon').css('fill','#EB0029');
+			   					for (var i = 1; i <= peso_hc; i++) {
+			   						$('#map2 g.state[data-name="'+abre+'"] polygon:nth-of-type('+i+')').css('fill','#003594');
+			   					}
+   			   				}
    			   			} else {
 	   			   			if (siva1) {
 	   			   				$('.big_bar.hc').append('<div data-name="'+abre+'" style="width:'+peso+'%;"></div>');
