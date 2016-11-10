@@ -54,16 +54,6 @@
     		var tip2 = ($('.info_box.map1').width()+32)/2;
     		$('.info_box.map1').css({left:  e.pageX - tip2,top:   e.pageY - tip});
     		$('.info_box.map1 h3').html($(this).attr('full-name'));
-    		if ($(this).hasClass('redd')) {
-    			$('.info_box.map1 th').css('color','#EB0029');
-    			$('.info_box.map1 h3').css('color','#EB0029');
-    		} else if ($(this).hasClass('bluee')) {
-    			$('.info_box.map1 th').css('color','#003594');
-    			$('.info_box.map1 h3').css('color','#003594');
-    		} else {
-    			$('.info_box.map1 th').css('color','#666666');
-    			$('.info_box.map1 h3').css('color','#666666');
-    		}
     		$('.info_box.map1 th.ve').html($(this).attr('votos'));
     		$('.info_box.map1 th.peso').html($(this).attr('peso')+'%');
     		$('.info_box.map1 th.hora').html($(this).attr('hora'));
@@ -86,16 +76,6 @@
     		$('.info_box.map2').css({left:  e.pageX - tip2,top:   e.pageY - tip});
     		$('.info_box.map2 h3').html($(this).attr('full-name'));
     		$('.info_box.map2 th.ve').html($(this).attr('votos'));
-    		if ($(this).hasClass('redd')) {
-    			$('.info_box.map2 th.ve').css('color','#EB0029');
-    			$('.info_box.map2 h3').css('color','#EB0029');
-    		} else if ($(this).hasClass('bluee')) {
-    			$('.info_box.map2 th.ve').css('color','#003594');
-    			$('.info_box.map2 h3').css('color','#003594');
-    		} else {
-    			$('.info_box.map2 th.ve').css('color','#666666');
-    			$('.info_box.map2 h3').css('color','#666666');
-    		}
     		$('.info_box.map2 span.demo').html($(this).attr('democrata'));
     		$('.info_box.map2 span.repu').html($(this).attr('republicano'));
     		$('.info_box.map2').show();
@@ -185,10 +165,8 @@
 		   			   				if (siva1 || siva2) {
 		   			   				if (peso_hc>peso_dt) {
 		   			   					$('#map1 .state[data-name="'+abre+'"]').css('fill','#003594');
-		   			   					$('.state[data-name="'+abre+'"]').addClass('bluee');
 		   			   				} else {
 		   			   					$('#map1 .state[data-name="'+abre+'"]').css('fill','#EB0029');
-		   			   					$('.state[data-name="'+abre+'"]').addClass('redd');
 		   			   				}
 			   			   				$('#map2 g.state[data-name="'+abre+'"] polygon').css('fill','#EB0029');
 					   					for (var i = 1; i <= peso_hc; i++) {
@@ -199,14 +177,12 @@
 			   			   			if (siva1) {
 			   			   				$('.big_bar.hc').append('<div data-name="'+abre+'" style="width:'+peso+'%;"></div>');
 			   			   				$('#map1 .state[data-name="'+abre+'"]').css('fill','#003594');
-			   			   				$('.state[data-name="'+abre+'"]').addClass('bluee');
 			   			   				$('#map2 g.state[data-name="'+abre+'"] polygon').css('fill','#003594');
 			   			   				$('#map2 g.state[data-name="'+abre+'"] polyline').css('fill','#003594');
 			   			   			}
 			   			   			if (siva2) {
 			   			   				$('.big_bar.dt').append('<div data-name="'+abre+'" style="width:'+peso+'%;"></div>');
 			   			   				$('#map1 .state[data-name="'+abre+'"]').css('fill','#EB0029');
-			   			   				$('.state[data-name="'+abre+'"]').addClass('redd');
 			   			   				$('#map2 g.state[data-name="'+abre+'"] polygon').css('fill','#EB0029');
 			   			   				$('#map2 g.state[data-name="'+abre+'"] polyline').css('fill','#EB0029');
 			   			   			}
