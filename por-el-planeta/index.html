@@ -43,7 +43,105 @@ img.emoji {
 <link rel='shortlink' href='http://www.televisa.news/?p=308179' />
 <link rel="alternate" type="application/json+oembed" href="http://www.televisa.news/wp-json/oembed/1.0/embed?url=http%3A%2F%2Flocalhost%2F%7Eprogramacion1%2Fnews%2Fpor-el-planeta%2F" />
 <link rel="alternate" type="text/xml+oembed" href="http://www.televisa.news/wp-json/oembed/1.0/embed?url=http%3A%2F%2Flocalhost%2F%7Eprogramacion1%2Fnews%2Fpor-el-planeta%2F&#038;format=xml" />
-		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+
+<script type='text/javascript'>
+    
+    var idDFPObject = "";
+    var idDFP       = "";
+    var tagNames    = "";
+    
+    var adUnit = "/5644/es.esmas.not/por-el-planeta";
+    var slotA, slotB, slotC, slotD, slotE = "";
+    var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+
+    (function() {
+        var gads = document.createElement("script");
+        gads.async = true;
+        gads.type = "text/javascript";
+        var useSSL = "https:" == document.location.protocol;
+        gads.src = (useSSL ? "https:" : "http:") +
+        "//www.googletagservices.com/tag/js/gpt.js";
+        var node = document.getElementsByTagName("script")[0];
+        node.parentNode.insertBefore(gads, node);
+    })();
+    
+</script>
+<script type="text/javascript">
+
+    googletag.cmd.push(function() {
+        
+        var mappingMasthead = googletag.sizeMapping().
+        addSize([980, 140], [[970, 250], [970, 90], [728, 90]]). //Desktop and landscape.
+        addSize([740, 140], [728, 90]). // /Ipad.
+        addSize([320, 140], [320, 50]). // Iphones.
+        build();
+        
+        var mappingSuper = googletag.sizeMapping().
+        addSize([980, 140], [728, 90]). //Desktop and landscape.
+        addSize([740, 140], [728, 90]). // /Ipad.
+        addSize([320, 140], [320, 50]). // Iphones.
+        build();
+        
+        var mappingLarge = googletag.sizeMapping().
+        addSize([980, 140], [[300, 600],[300, 250]]). //Desktop and landscape.
+        addSize([740, 140], [[300, 600],[300, 250]]). // /Ipad.
+        addSize([320, 140], [300, 250]). // Iphones.
+        build();
+
+        var mappingSky = googletag.sizeMapping().
+        addSize([980,140],[120, 600]). //Desktop and landscape.
+        addSize([740,140],[120, 600]). // /Ipad.
+        addSize([0,0],[]). // Iphones.
+        build();
+
+
+        var slotA = googletag.defineSlot(adUnit, [980, 140], [[970, 250],[970, 90],[728, 90]],"ban_masthead").defineSizeMapping(mappingMasthead).setCollapseEmptyDiv(true).addService(googletag.pubads()).setTargeting("position","atf");
+        
+        //Home
+        var slotB = googletag.defineSlot(adUnit, [970, 250], "ban_super").defineSizeMapping(mappingSuper).setCollapseEmptyDiv(true).addService(googletag.pubads()).setTargeting("position","atf");  
+        
+        var slotC = googletag.defineSlot(adUnit, [728, 90], "ban_super_middle").defineSizeMapping(mappingSuper).setCollapseEmptyDiv(true).addService(googletag.pubads()).setTargeting("position","atf");    
+
+        var slotD = googletag.defineSlot(adUnit, [728, 90], "ban_super_bottom").defineSizeMapping(mappingSuper).setCollapseEmptyDiv(true).addService(googletag.pubads()).setTargeting("position","atf");    
+     
+        var slotE = googletag.defineSlot(adUnit, [300, 250], 'desktop_box_banner').addService(googletag.pubads()).setTargeting("position", "atf"); 
+
+        //Single
+        
+        var slotSingle728x90Top = googletag.defineSlot(adUnit, [728, 90], 'desktop_box_banner_single_top').addService(googletag.pubads()).setTargeting("position", "atf"); 
+        
+        var slotSingle300x250 = googletag.defineSlot(adUnit, [300, 250], 'desktop_box_banner_single').addService(googletag.pubads()).setTargeting("position", "atf"); 
+
+        var slotSingle300x600 = googletag.defineSlot(adUnit, [300, 600], 'desktop_box_banner_single_large').addService(googletag.pubads()).setTargeting("position", "atf"); 
+
+        var slotSingle728x90 = googletag.defineSlot(adUnit, [728, 90], 'desktop_box_banner_single_bottom').addService(googletag.pubads()).setTargeting("position", "atf"); 
+
+
+        //Seccion
+        
+        var slotSection970x250 = googletag.defineSlot(adUnit, [970, 250], "ban_box_section_top").defineSizeMapping(mappingSuper).setCollapseEmptyDiv(true).addService(googletag.pubads()).setTargeting("position","atf");   
+
+        var slotSection970x250Middle = googletag.defineSlot(adUnit, [970, 250], "ban_box_section_middle").defineSizeMapping(mappingSuper).setCollapseEmptyDiv(true).addService(googletag.pubads()).setTargeting("position","atf");  
+
+        var slotSection300x600Left = googletag.defineSlot(adUnit, [300, 600], "ban_box_section_left").defineSizeMapping(mappingSuper).setCollapseEmptyDiv(true).addService(googletag.pubads()).setTargeting("position","atf");  
+
+
+        //Especiales
+        
+        var slotEspeciales970x250 = googletag.defineSlot(adUnit, [970, 250], "ban_box_especiales_top").defineSizeMapping(mappingSuper).setCollapseEmptyDiv(true).addService(googletag.pubads()).setTargeting("position","atf"); 
+
+        var slotEspeciales970x250 = googletag.defineSlot(adUnit, [970, 250], "ban_box_especiales_middle").defineSizeMapping(mappingSuper).setCollapseEmptyDiv(true).addService(googletag.pubads()).setTargeting("position","atf");  
+
+        var slotEspeciales300x600 = googletag.defineSlot(adUnit, [300, 600], "ban_box_especiales_box").defineSizeMapping(mappingSuper).setCollapseEmptyDiv(true).addService(googletag.pubads()).setTargeting("position","atf"); 
+
+        googletag.defineSlot('/5644/es.televisa.ent/home', 'fluid', 'native01').addService(googletag.pubads());
+        
+        googletag.enableServices();
+        
+    });
+</script>
 		
 	</head>
 	
@@ -100,63 +198,95 @@ img.emoji {
 	<iframe width="560" height="315" src="https://www.youtube.com/embed/dmj0QQwnx_c?modestbranding=1&autohide=1&showinfo=0&controls=0&autoplay=1&loop=1&playlist=dmj0QQwnx_c&vq=hd2160" frameborder="0" allowfullscreen style="opacity:1;"></iframe>
 </div>
 <div class="over_img clearfix">
-	<img class="logo_pep" src="pep.svg">
-	<img class="logo_gnp" src="gnp.svg">
+	<img class="logo_pep" src="pep.png">
+	<img class="logo_gnp" src="gnp.png">
 </div>
 <div class="full_container clearfix">
 	<div class="single_post_content clearfix">
-		<p><strong>Por el Planeta es una serie de esfuerzos que buscan capturar el esplendor de la naturaleza y poner atención en los efectos que tenemos sobre ella.</strong></p>
+		<p class="higher"><strong>Por el Planeta es una serie de esfuerzos que buscan capturar el esplendor de la naturaleza y poner atención en los efectos que tenemos sobre ella.</strong></p>
 		<p>Aportamos herramientas para que nuestro público comprenda la importancia del cuidado del medio ambiente y el respeto a todas especies.</p>
 		<p>Este es el espacio para contemplar el planeta en que vivimos en todo su esplendor, para descubrir por qué es necesario trabajar juntos Por el Planeta.</p>
 	<!-- </div>
 	<div class="alt_container clearfix"> -->
 		<h2>DOCUMENTALES POR EL PLANETA</h2>
-		<p>Desde la selva tropical hasta las profundidades del océano, Por el Planeta produce un serie de reportajes documentales que abordan diversos aspectos de las maravillas y urgencias ecológicas del planeta. Mira completos los episodios publicados hasta el momento</p>
+		<p>Desde la selva tropical hasta las profundidades del océano, Por el Planeta produce un serie de reportajes documentales que abordan diversos aspectos de las maravillas y urgencias ecológicas del planeta. Mira completos los episodios publicados hasta el momento.</p>
 
-		<h3>Namibia, desierto infinito</h3>
+		<img class="img_head" src="headers_pep/namibia02.png" />
+		<h3 class="joins">Namibia, desierto infinito</h3>
 		<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLmZsiRvDGLtcvq-OTLEumUF-cwNRPJ7ez" frameborder="0" allowfullscreen></iframe>
-		<span class="caption">Por el Planeta visita el desierto más antiguo del mundo en Namibia para recorrer estas tierras infinitas y descubrir la vida que aún subsiste.</span>
+		<span class="caption extra_border">Por el Planeta visita el desierto más antiguo del mundo en Namibia para recorrer estas tierras infinitas y descubrir la vida que aún subsiste.</span>
 		
-		<h3>Tiburones, encuentros cercanos</h3>
+		<img class="img_head" src="headers_pep/tiburones02.png" />
+		<h3 class="joins">Tiburones, encuentros cercanos</h3>
 		<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLmZsiRvDGLtecwoSiFhYi-wyfzaS4x_p3" frameborder="0" allowfullscreen></iframe>
-		<span class="caption">Encontrar a la criaturas del mar no es un reto, simplemente debemos mirar a los ojos de estos. Un encuentro cercano con un tiburón es un sueño que te permite abrazar la naturaleza de la bestia; pues a pesar de todo nos parecemos.</span>
+		<span class="caption extra_border">Encontrar a la criaturas del mar no es un reto, simplemente debemos mirar a los ojos de estos. Un encuentro cercano con un tiburón es un sueño que te permite abrazar la naturaleza de la bestia; pues a pesar de todo nos parecemos.</span>
 
-		<!-- El último edén de áfrica -->
+		<img class="img_head" src="headers_pep/eden02.png" />
+		<h3 class="joins">El último edén de África</h3>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLmZsiRvDGLtf-bz0DW-yu9kjvqLKmLYky" frameborder="0" allowfullscreen></iframe>
+		<span class="caption extra_border">Si alguna vez existió el paraíso terrenal, debió estar en la cuenca del Congo. Aquí los gorilas retan la mirada. Aquí existe una de las selvas más enigmáticas del continente negro llamada El Último Edén de África.</span>
 
-		<h3>Las Venas de la Tierra</h3>
+		<img class="img_head" src="headers_pep/venas2.png" />
+		<h3 class="joins">Las Venas de la Tierra</h3>
 		<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLmZsiRvDGLtfxW4dMHy_ucwuV5RBiBsyw" frameborder="0" allowfullscreen></iframe>
-		<span class="caption">En Quintana Roo y en la península de Yucatán, ubicados en México, se esconden grandes misterios inimaginables.</span>
+		<span class="caption extra_border">En Quintana Roo y en la península de Yucatán, ubicados en México, se esconden grandes misterios inimaginables.</span>
 
-		<!-- La huella del jaguar -->
+		<img class="img_head" src="headers_pep/jaguar02.png" />
+		<h3 class="joins">La Huella del Jaguar</h3>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLmZsiRvDGLtdYZ7d_dc88z4zHBk7ahtSD" frameborder="0" allowfullscreen></iframe>
+		<span class="caption extra_border">Los mallas le llamaron balam. El jaguar era el dios Sol. Durante su viaje el día se hacía viejo y se convertía en noche. Hoy, el señor de la selva ha perdido más de la mitad del territorio que dominaba. Es cazado por ganaderos y desollado por coleccionistas. Este es el recorrido de un año emprendido por el equipo del Por el Planeta en busca de la huella del jaguar.</span>
 
-		<!-- La expedición -->
+		<img class="img_head" src="headers_pep/expedicion02.png" />
+		<h3 class="joins">La Expedición</h3>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLmZsiRvDGLtewTu2AhEUTNa2tftrp8f6A" frameborder="0" allowfullscreen></iframe>
+		<span class="caption extra_border">¿Qué es el mar, por qué seduce, por qué tienta? Las preguntas de Benedetti son también las de los investigadores marinos del archipiélago de Revillagigedo. Por primera vez, Noticieros Televisa se embarca en una expedición marina.</span>
 
-		<h3>Amazonas, la selva encantada</h3>
+		<img class="img_head" src="headers_pep/amazonas02.png" />
+		<h3 class="joins">Amazonas, la selva encantada</h3>
 		<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLmZsiRvDGLtcFyUBIGDcTHKKcuA6Wzagq" frameborder="0" allowfullscreen></iframe>
-		<span class="caption">Adéntrate en el mágico ecosistema de la selva amazónica donde encontraras de la más pequeña a la más enigmática especie.</span>
+		<span class="caption extra_border">Adéntrate en el mágico ecosistema de la selva amazónica donde encontraras de la más pequeña a la más enigmática especie.</span>
 
-		<h3>El Eco de las Sirenas</h3>
+		<img class="img_head" src="headers_pep/sirenas02.png" />
+		<h3 class="joins">El Eco de las Sirenas</h3>
 		<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLmZsiRvDGLtd86lQCh4T-zpByZ4aQoAGA" frameborder="0" allowfullscreen></iframe>
-		<span class="caption">'Crystal River', parque en el que el manatí tiene contacto directo con el humano, envuelve una gran controversia.</span>
+		<span class="caption extra_border">'Crystal River', parque en el que el manatí tiene contacto directo con el humano, envuelve una gran controversia.</span>
 
-		<h3>Patagonia salvaje</h3>
+		<img class="img_head" src="headers_pep/patagonia02.png" />
+		<h3 class="joins">Patagonia salvaje</h3>
 		<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLmZsiRvDGLtfoyicdPeqbMRrT_EwkXjIX" frameborder="0" allowfullscreen></iframe>
-		<span class="caption">Una región árida y seca en el sur donde la vida nace en una ola y también se va. El equipo de 'Por el Planeta' se dirige a un accidente costero argentino donde habitan las especies más emocionantes; un lugar extremo, pero sobre todo salvaje.</span>
+		<span class="caption extra_border">Una región árida y seca en el sur donde la vida nace en una ola y también se va. El equipo de 'Por el Planeta' se dirige a un accidente costero argentino donde habitan las especies más emocionantes; un lugar extremo, pero sobre todo salvaje.</span>
 		
-		<h3>El Señor de Guadalupe</h3>
+		<img class="img_head" src="headers_pep/guadalupe02.png" />
+		<h3 class="joins">El Señor de Guadalupe</h3>
 		<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLmZsiRvDGLtfShzVVDFSQ5Jch9iFNQdvN" frameborder="0" allowfullscreen></iframe>
-		<span class="caption">El equipo de 'Por el Planeta' graba las características del tiburón blanco que quieren marcar, junto al Doctor Mauricio Hoyos.</span>
+		<span class="caption extra_border">El equipo de 'Por el Planeta' graba las características del tiburón blanco que quieren marcar, junto al Doctor Mauricio Hoyos.</span>
 		
-		<h3>Los unicornios del mar</h3>
+		<img class="img_head" src="headers_pep/unicornios2.png" />
+		<h3 class="joins">Los unicornios del mar</h3>
 		<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLmZsiRvDGLtcH_MFrzT5v60YPO2L0FR7r" frameborder="0" allowfullscreen></iframe>
-		<span class="caption">El equipo de Por el Planeta explora el círculo polar ártico, donde no existe la noche durante seis meses, con el fin de encontrar a un animal casi mítico: El Unicornio del Mar.</span>
+		<span class="caption extra_border">El equipo de Por el Planeta explora el círculo polar ártico, donde no existe la noche durante seis meses, con el fin de encontrar a un animal casi mítico: El Unicornio del Mar.</span>
 
-		<!-- 17 días en el fin del mundo -->
+		<img class="img_head" src="headers_pep/antartida02.png" />
+		<h3 class="joins">17 días en el fin del mundo: la Antártida</h3>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLmZsiRvDGLtcGJ6Idq88PzBqpUoVbwJm4" frameborder="0" allowfullscreen></iframe>
+		<span class="caption extra_border">En el continente Antártico, el termómetro puede alcanza menos de 80 grados bajo cero. Aunque cubierto de agua congelada, es también el lugar más seco del planeta. Una masa de 14 millones de kilómetros cuadrados que se eleva imponente sobre el nivel del mar.</span>
 
-		<h3>Palau, el último paraíso</h3>
+		<img class="img_head" src="headers_pep/palau02.png" />
+		<h3 class="joins">Palau, el último paraíso</h3>
 		<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLmZsiRvDGLteKexyWN61F-ZZTI9a18pzA" frameborder="0" allowfullscreen></iframe>
 		<span class="caption">Palau, habitat de sorprendentes formas de vida; donde las plantas son animales y los animales flores.</span>
-		
+
+	</div>
+
+	<div id='ban_super' class="ad_space_leader clearfix">
+        <script type='text/javascript'>
+            googletag.cmd.push(function() {
+                googletag.display('ban_super');
+            });
+        </script>
+    </div>
+	
+    <div class="single_post_content clearfix">
 		<h3>Galería documental</h3>
 			<ul class="bx_slider clearfix">
 				<li><div class="gal_frame"><img src="pep/01.jpg"></div></li>
@@ -567,11 +697,6 @@ img.emoji {
 		</div>
 	</div>
 		<script type='text/javascript' src='http://www.televisa.news/wp-content/themes/news/js/plugins.js?ver=1.0'></script>
-<script type='text/javascript'>
-/* <![CDATA[ */
-var ajax_url = "http:\/\/localhost\/~programacion1\/news\/wp-admin\/admin-ajax.php";
-/* ]]> */
-</script>
 <script type='text/javascript' src='functions.js?ver=1.0'></script>
 <script type='text/javascript' src='https://code.jquery.com/ui/1.12.1/jquery-ui.js?ver=1.12.1'></script>
 <script type='text/javascript' src='http://www.televisa.news/wp-includes/js/wp-embed.min.js?ver=4.6.1'></script>

@@ -250,6 +250,15 @@ div.comments {margin-top:35px;width:100%;float:left;}
 
 /*** AUTOPROMOS & ADS ***/
 
+.ad_space_box {max-width:300px;height:250px;margin:0 auto;}
+.sidebar_single .ad_space_box {margin-top:20px;}
+.ad_space_large {max-width:300px;height:600px;margin:0 auto;}
+.ad_space_min {max-width:728px;height:90px;margin:10px auto 50px;}
+.ad_space_leader {max-width:970px;height:90px;margin:30px auto; text-align: center;}
+.ad_space_leader_margin {max-width:970px;height:90px;margin:10px auto 45px; text-align: center;}
+.breaking_feed .ad_space_box {position:absolute;bottom:0px;}
+.sidebar_single .ad_space_large {margin-top:25px;}
+
 .autopromos {width:100%;margin-bottom:50px;}
 .autopromos img {width:100%;height:auto;}
 .ad_space {float:right;width:300px;}
@@ -1096,6 +1105,7 @@ a img.aligncenter {display:block;margin-left:auto;margin-right:auto}
 .page-template-page-por-el-planeta .main_video .fluid-width-video-wrapper {background:#000;padding-top:42.92%!important;}
 .page-template-page-por-el-planeta .single_post_content {max-width: 700px;width: 100%;margin-bottom:20px;}
 .page-template-page-por-el-planeta .single_post_content p {font-family:'Merriweather', serif;line-height:170%;font-size:18px;}
+.page-template-page-por-el-planeta .single_post_content p.higher {line-height:145%;font-size:32px;}
 .page-template-page-por-el-planeta h2 {font-family:'Alegreya Sans';color:#333e48;font-size:32px;margin-bottom:10px;font-weight:700!important;}
 .page-template-page-por-el-planeta h3 {font-family:'Alegreya Sans';color:#333e48;font-size:26px;margin-bottom:5px;font-weight:700!important;}
 .page-template-page-por-el-planeta img.full_size {width:100%;height:auto;position:relative;z-index:1990;margin-bottom:-8px;}
@@ -1103,6 +1113,12 @@ a img.aligncenter {display:block;margin-left:auto;margin-right:auto}
 .page-template-page-por-el-planeta a.special {font-weight:600;color:#2E7EC0;border-bottom: 2px solid #2E7EC0;}
 p.no_margin {margin-bottom:0px;}
 p._tcenter {text-align:center!important;}
+
+.page-template-page-por-el-planeta img.img_head {margin-bottom:15px;}
+.page-template-page-por-el-planeta h3.joins {text-align:center;font-size:30px;margin-top:0px;margin-bottom:25px;position:relative;}
+.page-template-page-por-el-planeta h3.joins:after {content:"";background:#333e48;width:60px;height:5px;position:absolute;top:-21px;left:50%;margin-left:-30px;}
+
+.page-template-page-por-el-planeta .extra_border {margin-bottom:35px!important;}
 
 /*.bx-wrapper {position: relative;margin: 0 auto 30px;padding: 0;zoom: 1;opacity:0;}
 .bx-wrapper img {display: block;}
